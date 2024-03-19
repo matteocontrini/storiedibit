@@ -56,6 +56,11 @@ AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
 
+# fix for webp images
+<IfModule mod_mime.c>
+AddType image/webp webp
+</IfModule>
+
 # set security headers in all responses
 <IfModule mod_headers.c>
 
