@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  @font-face {
+    font-family: RecoletaMedium;
+    font-display: swap;
+    src: url(/assets/fonts/RecoletaMedium.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: RecoletaSemiBold;
+    font-display: swap;
+    src: url(/assets/fonts/RecoletaSemiBold.woff2) format('woff2');
+  }
+
+  body {
+    background-color: #f5f5f5;
+    padding: 0 15px;
+  }
+
+  h1 {
+    font-family: 'RecoletaSemiBold', 'Inter Variable', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    @apply text-5xl pt-20;
+  }
+
+  h2 {
+    font-family: 'RecoletaMedium', sans-serif;
+    font-weight: 850;
+    font-size: 30px;
+    line-height: 33px;
+    display: flex;
+    width: fit-content;
+    @apply mt-16 mb-8 mx-auto;
+  }
+
+  h3 {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  p, ul, li {
+    font-size: 17px;
+    line-height: 28px;
+    color: #333;
+    margin: 10px 0;
+  }
+
+  p a, ul a {
+    color: #1535C9;
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style: disc inside;
+  }
+
+  hr {
+    border-top: 1px solid #E5E7EB;
+  }
+
+  img {
+    margin: 20px 0;
+  }
+
+  blockquote {
+    background: #efefef;
+    padding: 25px 20px;
+    font-size: 24px;
+    line-height: 32px;
+    @apply font-serif text-center;
+  }
+
+  blockquote footer {
+    @apply block mt-5 font-sans text-center text-gray-600 text-sm underline;
+  }
+}

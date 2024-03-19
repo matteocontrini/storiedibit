@@ -1,0 +1,12 @@
+{
+  "name": "storiedibit",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "watch": "npx tailwindcss -i ./src/css/main.css -o ./assets/css/main.css -w",
+    "build": "npx tailwindcss -i ./src/css/main.css -o ./assets/css/main.css -m"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

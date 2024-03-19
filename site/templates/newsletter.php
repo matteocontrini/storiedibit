@@ -2,6 +2,13 @@
 
 /** @var Kirby\Cms\Page $page */
 
-echo $page->title();
+snippet('layout', slots: true);
 
+slot();
+
+?>
+
+<?= $page->text()->toBlocks() ?>
+
+<?php endslot() ?>
 
