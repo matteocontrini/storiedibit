@@ -1,0 +1,40 @@
+@font-face {
+  font-family: RecoletaMedium;
+  font-display: swap;
+  src: url(../fonts/RecoletaMedium.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: RecoletaSemiBold;
+  font-display: swap;
+  src: url(../fonts/RecoletaSemiBold.woff2) format("woff2")
+}
+
+/* Text/list block */
+.k-block-type-text p, .k-block-type-list-input p {
+  font-size: 17px;
+  line-height: 28px;
+}
+
+.k-block-type-list-input li {
+  margin-bottom: 10px;
+}
+
+.k-block-type-text p + * {
+  margin-block-start: 10px;
+}
+
+.k-block-type-newsletter-subsection {
+  padding: 10px 10px 10px 0;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.k-block-type-newsletter-subsection:before {
+  content: "• ";
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 20px;
+}

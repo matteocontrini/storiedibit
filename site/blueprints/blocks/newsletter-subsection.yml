@@ -1,0 +1,8 @@
+name: Newsletter subsection
+icon: title
+wysiwyg: true
+preview: text
+fields:
+  text:
+    label: 'Titolo sottosezione'
+    type: text

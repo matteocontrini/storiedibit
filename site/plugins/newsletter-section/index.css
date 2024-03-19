@@ -1,0 +1,12 @@
+.k-block-type-newsletter-section {
+  padding: 10px 0;
+}
+
+.k-block-type-newsletter-section input {
+  font-family: RecoletaMedium, sans-serif;
+  font-weight: 850;
+  font-size: 30px;
+  line-height: 33px;
+  text-align: center;
+  outline: none;
+}

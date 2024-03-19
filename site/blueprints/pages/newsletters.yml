@@ -1,0 +1,33 @@
+blueprint: page
+
+title: Newsletter
+icon: 📚
+
+columns:
+  left:
+    width: 1/2
+    sections:
+      drafts:
+        type: pages
+        template: newsletter
+        parent: kirby.page("newsletter")
+        label: Drafts
+        status: draft
+
+      unlisted:
+        type: pages
+        template: newsletter
+        parent: kirby.page("newsletter")
+        label: In Review
+        status: unlisted
+
+  right:
+    width: 1/2
+    sections:
+      listed:
+        type: pages
+        template: newsletter
+        parent: kirby.page("newsletter")
+        label: Published
+        status: listed
+#        info: "{{ page.title.toDate('Y-m-d') }}"

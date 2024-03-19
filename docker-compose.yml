@@ -1,0 +1,7 @@
+services:
+  kirby:
+    build: .
+    ports:
+      - "9999:80"
+    volumes:
+      - .:/app
