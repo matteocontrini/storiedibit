@@ -1,7 +1,6 @@
 blueprint: page
 
 title: Newsletter
-#num: '{{ page.date.toDate("Ymd") }}'
 
 columns:
   main:
@@ -26,6 +25,14 @@ columns:
   sidebar:
     width: 1/3
     sections:
+      info:
+        type: info
+        headline: Number
+        icon: list-numbers
+        text: "{{ page.num }}"
       files:
         type: files
         info: "{{ file.dimensions }} - {{ file.nicesize }}"
+        image:
+          back: white
+          cover: true

@@ -30,4 +30,4 @@ columns:
         parent: kirby.page("newsletter")
         label: Published
         status: listed
-#        info: "{{ page.title.toDate('Y-m-d') }}"
+        info: "#{{ page.num }}"
