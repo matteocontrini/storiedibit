@@ -9,5 +9,18 @@ return [
     },
     'panel' => [
         'css' => 'assets/css/panel.css',
+    ],
+    'routes' => [
+        [
+            'pattern' => '(:num)',
+            'action' => function ($num) {
+                $page = page('newsletter')->children()->findBy('num', $num);
+                if ($page) {
+                    go($page->url());
+                }
+
+                $this->next();
+            }
+        ]
     ]
 ];
