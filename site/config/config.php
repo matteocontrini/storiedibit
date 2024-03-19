@@ -26,5 +26,6 @@ return [
                 $this->next();
             }
         ]
-    ]
+    ],
+    'thathoff.git-content.commitMessage' => 'Content: :action: :item: `:url:`'
 ];
