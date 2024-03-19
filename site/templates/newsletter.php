@@ -27,4 +27,3 @@ slot();
 </main>
 
 <?php endslot() ?>
-

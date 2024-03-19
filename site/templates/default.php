@@ -19,19 +19,9 @@ slot();
 <hr class="my-14">
 
 <main>
-    <?php foreach (page('newsletter')->children()->listed()->sortBy('num', 'desc') as $newsletter): ?>
-        <article>
-            <h2>
-                <a href="<?= $newsletter->url() ?>">
-                    <?= $newsletter->title() ?>
-                </a>
-            </h2>
-            <p>
-                <?= $newsletter->text()->toBlocks()->first() ?>
-            </p>
-        </article>
-    <?php endforeach; ?>
+    <a class="block font-serif text-3xl text-center" href="<?= page('newsletter')->url() ?>">
+        Vai all'archivio
+    </a>
 </main>
 
 <?php endslot() ?>
-
