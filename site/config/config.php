@@ -10,6 +10,10 @@ return [
     'panel' => [
         'css' => 'assets/css/panel.css',
     ],
+    'date'  => [
+        'handler' => 'intl'
+    ],
+    'locale' => 'it_IT.utf-8',
     'routes' => [
         [
             'pattern' => '(:num)',

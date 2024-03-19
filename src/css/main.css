@@ -64,8 +64,8 @@
     border-top: 1px solid #E5E7EB;
   }
 
-  img {
-    margin: 20px 0;
+  figure {
+    @apply my-5;
   }
 
   blockquote {
