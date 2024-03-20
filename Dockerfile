@@ -1,8 +1,5 @@
-FROM webdevops/php-apache:8.2
+FROM webdevops/php-apache:8.2-alpine
 
-RUN apt-get update && apt-get install -y git
-
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - &&\
-    apt-get install -y nodejs
+RUN apk update && apk add git nodejs npm
 
 RUN npm install -g mjml && mjml -V && which mjml
