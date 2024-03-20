@@ -1,13 +1,13 @@
 @font-face {
   font-family: RecoletaMedium;
   font-display: swap;
-  src: url(src/fonts/RecoletaMedium.woff2) format("woff2")
+  src: url(fonts/RecoletaMedium.woff2) format("woff2")
 }
 
 @font-face {
   font-family: RecoletaSemiBold;
   font-display: swap;
-  src: url(src/fonts/RecoletaSemiBold.woff2) format("woff2")
+  src: url(fonts/RecoletaSemiBold.woff2) format("woff2")
 }
 
 /* Text/list block */

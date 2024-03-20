@@ -1,4 +1,32 @@
 {
+  "../node_modules/@fontsource-variable/inter/files/inter-cyrillic-ext-wght-normal.woff2": {
+    "file": "inter-cyrillic-ext-wght-normal-DIEz8p5i.woff2",
+    "src": "../node_modules/@fontsource-variable/inter/files/inter-cyrillic-ext-wght-normal.woff2"
+  },
+  "../node_modules/@fontsource-variable/inter/files/inter-cyrillic-wght-normal.woff2": {
+    "file": "inter-cyrillic-wght-normal-BmJJXa8e.woff2",
+    "src": "../node_modules/@fontsource-variable/inter/files/inter-cyrillic-wght-normal.woff2"
+  },
+  "../node_modules/@fontsource-variable/inter/files/inter-greek-ext-wght-normal.woff2": {
+    "file": "inter-greek-ext-wght-normal-D5AYLNiq.woff2",
+    "src": "../node_modules/@fontsource-variable/inter/files/inter-greek-ext-wght-normal.woff2"
+  },
+  "../node_modules/@fontsource-variable/inter/files/inter-greek-wght-normal.woff2": {
+    "file": "inter-greek-wght-normal-DyIDNIyN.woff2",
+    "src": "../node_modules/@fontsource-variable/inter/files/inter-greek-wght-normal.woff2"
+  },
+  "../node_modules/@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2": {
+    "file": "inter-latin-ext-wght-normal-CN1pIXkb.woff2",
+    "src": "../node_modules/@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2"
+  },
+  "../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2": {
+    "file": "inter-latin-wght-normal-BgVq2Tq4.woff2",
+    "src": "../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2"
+  },
+  "../node_modules/@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2": {
+    "file": "inter-vietnamese-wght-normal-_GQuwPVU.woff2",
+    "src": "../node_modules/@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2"
+  },
   "src/fonts/RecoletaMedium.woff2": {
     "file": "RecoletaMedium-lmBN2g00.woff2",
     "src": "src/fonts/RecoletaMedium.woff2"
@@ -8,16 +36,28 @@
     "src": "src/fonts/RecoletaSemiBold.woff2"
   },
   "src/main.ts": {
-    "file": "main-Bvipn8KI.js",
+    "file": "main-BuZsEpSf.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
     "css": [
-      "main-WTk_bbjC.css"
+      "main-D1ujK5f3.css"
     ],
     "assets": [
+      "inter-cyrillic-ext-wght-normal-DIEz8p5i.woff2",
+      "inter-cyrillic-wght-normal-BmJJXa8e.woff2",
+      "inter-greek-ext-wght-normal-D5AYLNiq.woff2",
+      "inter-greek-wght-normal-DyIDNIyN.woff2",
+      "inter-vietnamese-wght-normal-_GQuwPVU.woff2",
+      "inter-latin-ext-wght-normal-CN1pIXkb.woff2",
+      "inter-latin-wght-normal-BgVq2Tq4.woff2",
       "RecoletaMedium-lmBN2g00.woff2",
       "RecoletaSemiBold-1kTMgrn3.woff2"
     ]
+  },
+  "src/panel.css": {
+    "file": "panel-CfucQWRm.css",
+    "src": "src/panel.css",
+    "isEntry": true
   }
 }

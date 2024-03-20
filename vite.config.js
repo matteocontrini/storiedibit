@@ -9,7 +9,7 @@ export default defineConfig(({mode}) => ({
     emptyOutDir: true,
     assetsDir: '',
     rollupOptions: {
-      input: ['assets/src/main.ts']
+      input: ['assets/src/main.ts', 'assets/src/panel.css']
     }
   },
   plugins: [kirby()],

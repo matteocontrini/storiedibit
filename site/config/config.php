@@ -2,14 +2,15 @@
 
 $config = [
     'debug' => false,
-    'ready' => function ($kirby) {
+    'ready' => function (Kirby\Cms\App $kirby) {
         return [
-            'debug' => kirby()->user() && kirby()->user()->role()->isAdmin()
+            'debug' => $kirby->user() && $kirby->user()->role()->isAdmin(),
+            'panel' => [
+                'css' => vite()->panelCss('src/panel.css'),
+                'js' => vite()->panelJs(),
+            ]
         ];
     },
-    'panel' => [
-        'css' => 'assets/panel.css',
-    ],
     'date' => [
         'handler' => 'intl'
     ],
