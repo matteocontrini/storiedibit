@@ -12,7 +12,8 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['"Inter Variable"', ...defaultTheme.fontFamily.sans],
-        'serif': ['RecoletaMedium', ...defaultTheme.fontFamily.serif], // TODO
+        'serif': ['RecoletaMedium', 'Publico Text', ...defaultTheme.fontFamily.serif],
+        'blockquote': defaultTheme.fontFamily.serif
       },
       colors: {
         sdb: {
