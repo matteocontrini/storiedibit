@@ -2,6 +2,16 @@
 
 This repository contains the Kirby-based website for [Storie di bit](https://storiedibit.it).
 
+## Development
+
+Run once:
+
+```bash
+git config core.hooksPath .hooks
+```
+
+Then launch with Docker and run `npm run dev`.
+
 ## Deployment
 
 - Clone this repository:
