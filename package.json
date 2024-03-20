@@ -1,12 +1,20 @@
 {
   "name": "storiedibit",
-  "version": "1.0.0",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "watch": "npx tailwindcss -i ./src/css/main.css -o ./assets/css/main.css -w",
-    "build": "npx tailwindcss -i ./src/css/main.css -o ./assets/css/main.css -m"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.1"
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.37",
+    "postcss-import": "^16.0.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-kirby": "^5.3.0"
   }
 }

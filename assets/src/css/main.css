@@ -2,18 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   @font-face {
     font-family: RecoletaMedium;
     font-display: swap;
-    src: url(/assets/fonts/RecoletaMedium.woff2) format('woff2');
+    src: url(../fonts/RecoletaMedium.woff2) format('woff2');
   }
 
   @font-face {
     font-family: RecoletaSemiBold;
     font-display: swap;
-    src: url(/assets/fonts/RecoletaSemiBold.woff2) format('woff2');
+    src: url(../fonts/RecoletaSemiBold.woff2) format('woff2');
   }
 
   body {

@@ -8,7 +8,7 @@ $config = [
         ];
     },
     'panel' => [
-        'css' => 'assets/css/panel.css',
+        'css' => 'assets/panel.css',
     ],
     'date' => [
         'handler' => 'intl'

@@ -4,3 +4,6 @@
 [submodule "site/plugins/git-content"]
 	path = site/plugins/git-content
 	url = https://github.com/thathoff/kirby-git-content.git
+[submodule "site/plugins/vite"]
+	path = site/plugins/vite
+	url = https://github.com/arnoson/kirby-vite.git

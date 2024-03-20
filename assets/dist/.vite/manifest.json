@@ -1,0 +1,23 @@
+{
+  "src/fonts/RecoletaMedium.woff2": {
+    "file": "RecoletaMedium-lmBN2g00.woff2",
+    "src": "src/fonts/RecoletaMedium.woff2"
+  },
+  "src/fonts/RecoletaSemiBold.woff2": {
+    "file": "RecoletaSemiBold-1kTMgrn3.woff2",
+    "src": "src/fonts/RecoletaSemiBold.woff2"
+  },
+  "src/main.ts": {
+    "file": "main-Bvipn8KI.js",
+    "name": "main",
+    "src": "src/main.ts",
+    "isEntry": true,
+    "css": [
+      "main-WTk_bbjC.css"
+    ],
+    "assets": [
+      "RecoletaMedium-lmBN2g00.woff2",
+      "RecoletaSemiBold-1kTMgrn3.woff2"
+    ]
+  }
+}

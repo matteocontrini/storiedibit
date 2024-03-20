@@ -35,6 +35,9 @@ RewriteRule ^site/(.*) index.php [L]
 # block direct access to Kirby and the Panel sources
 RewriteRule ^kirby/(.*) index.php [L]
 
+# block access to the src folder
+RewriteRule ^assets/src/(.*) index.php [L]
+
 # make site links work
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
