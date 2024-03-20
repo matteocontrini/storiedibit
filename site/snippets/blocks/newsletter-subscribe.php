@@ -12,8 +12,9 @@
             Iscriviti alla newsletter
         </h2>
 
-        <p class="text-sm text-white text-center">
-            Non perderti le prossime uscite! Iscriviti alla newsletter per ricevere ogni weekend via email le storie più interessanti della settimana.
+        <p class="mt-0 text-white text-center">
+            Non perderti le prossime uscite! Iscriviti alla newsletter per ricevere ogni weekend via email le storie più
+            interessanti della settimana.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-2 w-full">
