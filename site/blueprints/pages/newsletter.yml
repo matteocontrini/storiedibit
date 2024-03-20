@@ -21,6 +21,7 @@ columns:
           - list
           - newsletter-section
           - newsletter-subsection
+          - newsletter-subscribe
 
   sidebar:
     width: 1/3

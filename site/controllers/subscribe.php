@@ -15,6 +15,12 @@ return function (Kirby\Cms\App $kirby) {
         exit();
     }
 
+    if (get('privacy') != 'on') {
+        return [
+            'success' => false,
+        ];
+    }
+
     $email = get('email');
 
     if (empty($email) === true || V::email($email) === false) {
