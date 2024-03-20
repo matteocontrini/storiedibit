@@ -13,9 +13,6 @@
 
     <title><?= $site->title() ?></title>
 
-    <!-- TODO: replace with local font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
     <?= vite()->js('src/main.ts') ?>
     <?= vite()->css('src/main.ts') ?>
 </head>
