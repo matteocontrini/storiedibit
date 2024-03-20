@@ -16,3 +16,5 @@ node_modules
 /site/sessions/*
 !/site/sessions/index.html
 /site/config/.license
+
+/site/config/secrets.php

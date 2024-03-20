@@ -1,6 +1,7 @@
 <?php
 
 /** @var Kirby\Cms\Page $page */
+/** @var Kirby\Cms\Site $site */
 
 snippet('layout', slots: true);
 
@@ -29,6 +30,9 @@ slot();
             <p>
                 <?= $newsletter->text()->toBlocks()->first() ?>
             </p>
+            <a href="<?= $newsletter->url() ?>" class="underline">
+                Leggi tutto
+            </a>
         </article>
     <?php endforeach; ?>
 </main>

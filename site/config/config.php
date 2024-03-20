@@ -1,6 +1,6 @@
 <?php
 
-return [
+$config = [
     'debug' => false,
     'ready' => function ($kirby) {
         return [
@@ -10,7 +10,7 @@ return [
     'panel' => [
         'css' => 'assets/css/panel.css',
     ],
-    'date'  => [
+    'date' => [
         'handler' => 'intl'
     ],
     'locale' => 'it_IT.utf-8',
@@ -29,3 +29,11 @@ return [
     ],
     'thathoff.git-content.commitMessage' => 'Content: :action: :item: `:url:`'
 ];
+
+$secrets = include __DIR__ . '/secrets.php';
+
+if (is_array($secrets)) {
+    $config = array_merge($config, $secrets);
+}
+
+return $config;

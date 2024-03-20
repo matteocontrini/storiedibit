@@ -22,7 +22,8 @@ module.exports = {
           red: 'rgb(192, 0, 0)',
           brown: 'rgb(115, 3, 71)',
           teal: 'rgb(0, 96, 103)',
-        }
+        },
+        accent: '#A731D1'
       }
     },
     container: {
