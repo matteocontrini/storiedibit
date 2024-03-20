@@ -78,4 +78,13 @@
   blockquote footer {
     @apply block mt-5 font-sans text-center text-gray-600 text-sm underline;
   }
+
+  ul li p {
+    display: inline;
+  }
+
+  li > ul {
+    margin-left: 20px;
+  }
+
 }

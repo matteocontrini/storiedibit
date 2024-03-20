@@ -1,0 +1,11 @@
+title: Privacy
+
+icon: lock
+
+options:
+  changeStatus: false
+
+fields:
+  text:
+    label: Text
+    type: writer
