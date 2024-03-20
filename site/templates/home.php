@@ -20,6 +20,16 @@ slot();
 <hr class="my-14">
 
 <main>
+    <p class="text-center">
+        <strong>Storie di bit</strong> è una newsletter settimanale su Internet, intelligenza artificiale, reti,
+        telecomunicazioni, digitale e cybersecurity.
+    </p>
+
+    <p class="text-center">
+        Ogni weekend racconto e spiego le storie più interessanti della settimana, sia italiane che internazionali. Puoi
+        iscriverti qua sotto, è gratis!
+    </p>
+
     <form method="post" action="<?= page('subscribe')->url() ?>"
           class="bg-accent rounded-lg p-10 mt-14">
         <div class="absolute left-[-99999px]">
@@ -35,10 +45,10 @@ slot();
             <input type="email" id="email" name="email" required placeholder="Il tuo indirizzo email..."
                    class="rounded-lg px-4 h-12 text-center w-full">
 
-            <label for="privacy" class="text-white self-start text-sm">
+            <label for="privacy" class="self-start">
                 <input type="checkbox" id="privacy" name="privacy" required>
 
-                <span>
+                <span class="text-sm text-fuchsia-200">
                     Ho preso visione dell'<a href="" class="underline">informativa sulla privacy</a> e acconsento al trattamento dei dati personali per
                     l'invio della newsletter.
                 </span>
