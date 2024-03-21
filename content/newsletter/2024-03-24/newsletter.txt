@@ -2,7 +2,7 @@ Title: 2024-03-24
 
 ----
 
-Text: 
+Text: [{"content":{"text":"<p><strong>Oggi:</strong></p><p></p>"},"id":"372370c4-caf0-41a4-8996-5874edcfe1e0","isHidden":false,"type":"text"},{"content":{"text":"Regole di Internet","color":"blue"},"id":"27fa58d8-89d5-46b7-bb62-d6016763f633","isHidden":false,"type":"newsletter-section"},{"content":{"text":"Gli Stati "},"id":"4b0b510e-72a5-4c9f-9d35-fcf7a9c44539","isHidden":false,"type":"newsletter-subsection"},{"content":{"text":"<p>Si è molto discusso nelle ultime settimane della nuova legge approvata dalla Camera negli Stati Uniti che potrebbe costringere l'azienda che possiede TikTok, la cinese ByteDance, a vendere l'applicazione entro 5 mesi. La legge non è ancora approvata definitivamente perché deve passare anche dal Senato, e non è nemmeno detto che verrà mai effettivamente esaminata dal Senato.</p><p>Ci sono un'infinità di riflessioni che si possono fare sulla questione e servirebbe una newsletter intera solo per questo (a chi è interessato consiglio il numero dedicato della newsletter <a href=\"https://www.ilpost.it/newsletter/ab3bec82feda25399ba36ec56d50eca2/\" target=\"_blank\">Da costa a costa</a>), ma non va perso di vista il fatto che la questione è più politica che tecnica: </p>"},"id":"56885cc6-7401-4568-81ca-425470627f4c","isHidden":false,"type":"text"}]
 
 ----
 
