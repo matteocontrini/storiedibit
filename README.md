@@ -10,7 +10,12 @@ Run once:
 git config core.hooksPath .hooks
 ```
 
-Then launch with Docker and run `npm run dev`.
+Then run:
+
+```
+docker compose -f docker-compose.dev.yml up
+npm run dev
+```
 
 ## Deployment
 
@@ -27,8 +32,20 @@ git config user.name "Matteo Contrini"
 git config user.email "matteo@contrini.it"
 ```
 
+- Create the `site/config/secrets.php` config file with:
+
+```php
+<?php
+
+return [
+    'thathoff.git-content.commit' => false,
+    'emailoctopus.api_key' => '',
+    'emailoctopus.list_id' => '',
+];
+```  
+
 - Run with Docker:
 
 ```bash
-docker-compose up
+docker compose -f docker-compose.prod.yml up -d
 ```
