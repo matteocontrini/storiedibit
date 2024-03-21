@@ -2,8 +2,10 @@ version: '3'
 
 services:
   kirby:
+    container_name: storiedibit
     build: .
     ports:
       - "443:443"
     volumes:
       - .:/app
+      - ../ssh:/home/application/.ssh
