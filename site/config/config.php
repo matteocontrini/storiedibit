@@ -28,7 +28,7 @@ $config = [
             }
         ]
     ],
-    'thathoff.git-content.commitMessage' => 'Content: :action: :item: `:url:`'
+    'thathoff.git-content.commitMessage' => '[content] :action: :item: `:url:`'
 ];
 
 $secrets = include __DIR__ . '/secrets.php';
