@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  kirby:
+    build: .
+    user: "1002:1002"
+    ports:
+      - "9999:443"
+    volumes:
+      - .:/app
