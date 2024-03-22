@@ -6,7 +6,7 @@ $items = $block->sources()->toStructure();
 
 ?>
 
-<div class="flex gap-x-2.5 gap-y-2 flex-wrap my-3">
+<div class="flex gap-x-2.5 gap-y-2 flex-wrap my-5">
     <?php foreach ($items as $item): ?>
         <a class="bg-gray-200 px-2.5 py-1 rounded-lg text-sm font-semibold flex items-center gap-1.5"
            href="<?= $item->url() ?>" target="_blank" rel="nofollow noopener">

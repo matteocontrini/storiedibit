@@ -72,11 +72,16 @@
     padding: 25px 20px;
     font-size: 24px;
     line-height: 32px;
-    @apply font-blockquote text-center;
-  }
+    margin: 20px 0;
+    @apply font-blockquote text-center rounded-lg;
 
-  blockquote footer {
-    @apply block mt-5 font-sans text-center text-gray-600 text-sm underline;
+    footer {
+      @apply block mt-5 font-sans text-center text-gray-600 text-sm;
+
+      a {
+        @apply underline;
+      }
+    }
   }
 
   ul li p {
