@@ -25,7 +25,7 @@ $items = $block->sources()->toStructure();
         ?>
         <a class="bg-gray-200 px-2.5 py-1 rounded-lg text-sm font-semibold flex items-center gap-1.5"
            href="<?= $item->url() ?>" target="_blank" rel="nofollow noopener">
-            <img src="<?= $asset ?>" alt="" class="w-4 h-4">
+            <img src="<?= $asset ?>" alt="" class="w-4 h-4 rounded-sm">
 
             <span>
                 <?= $item->name() ?>
