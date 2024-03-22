@@ -24,7 +24,7 @@ slot();
         <?= $page->title() ?>
     </h2>
 
-    <?= $page->text() ?>
+    <?= $page->text()->smartypants() ?>
 </main>
 
 <?php endslot() ?>
