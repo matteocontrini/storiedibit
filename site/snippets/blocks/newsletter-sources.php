@@ -6,7 +6,7 @@ $items = $block->sources()->toStructure();
 
 ?>
 
-<div class="flex gap-x-2.5 gap-y-2 flex-wrap my-5">
+<div class="flex gap-x-2.5 gap-y-2 flex-wrap mt-4 mb-5">
     <?php foreach ($items as $item): ?>
         <?php
         $domain = parse_url($item->url(), PHP_URL_HOST);
