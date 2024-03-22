@@ -1,6 +1,7 @@
 <?php
 
 /** @var Kirby\Cms\Page $page */
+/** @var Kirby\Cms\Site $site */
 
 snippet('layout', slots: true);
 
@@ -23,7 +24,7 @@ slot();
 <hr class="my-14">
 
 <main>
-    <?= $page->text()->toBlocks() ?>
+    <?= smartypants($page->text()->toBlocks()) ?>
 </main>
 
 <?php endslot() ?>

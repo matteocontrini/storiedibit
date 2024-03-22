@@ -28,7 +28,7 @@ slot();
                 </a>
             </h2>
             <p>
-                <?= $newsletter->text()->toBlocks()->first() ?>
+                <?= smartypants($newsletter->text()->toBlocks()->first()) ?>
             </p>
             <a href="<?= $newsletter->url() ?>" class="underline">
                 Leggi tutto
