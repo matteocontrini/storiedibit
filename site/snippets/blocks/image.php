@@ -22,7 +22,7 @@ if ($block->link()->isNotEmpty()) {
 ?>
 <figure>
     <a href="<?= $url ?>" target="_blank">
-        <img src="<?= $src ?>" alt="<?= $alt ?>" loading="lazy" alt="rounded-lg">
+        <img src="<?= $src ?>" alt="<?= $alt ?>" loading="lazy" class="rounded-lg">
     </a>
 
     <?php if ($caption->isNotEmpty()): ?>
