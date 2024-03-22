@@ -1,0 +1,15 @@
+name: Newsletter sources
+icon: url
+wysiwyg: true
+preview: fields
+fields:
+  sources:
+    label: 'Fonti'
+    type: structure
+    fields:
+      url:
+        label: URL
+        type: url
+      name:
+        label: Nome
+        type: text
