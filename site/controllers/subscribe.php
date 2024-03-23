@@ -3,6 +3,26 @@
 use Kirby\Http\Remote;
 use Kirby\Toolkit\V;
 
+function send_to_telegram($email): void
+{
+    try {
+        $chat_id = option('telegram.chat_id');
+        $token = option('telegram.token');
+
+        $text = "Nuovo iscritto: <code>" . htmlentities($email) . "</code>";
+
+        new Remote("https://api.telegram.org/bot$token/sendMessage", [
+            'method' => 'POST',
+            'data' => [
+                'chat_id' => $chat_id,
+                'text' => $text,
+                'parse_mode' => 'HTML',
+            ]
+        ]);
+    } catch (Exception $error) {
+    }
+}
+
 return function (Kirby\Cms\App $kirby) {
     if (!$kirby->request()->is('POST') || !get('submit')) {
         $kirby->response()->code(404);
@@ -43,6 +63,8 @@ return function (Kirby\Cms\App $kirby) {
         ]);
 
         if ($response->code() === 200) {
+            send_to_telegram($email);
+
             return [
                 'success' => true,
             ];
