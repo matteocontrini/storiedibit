@@ -30,6 +30,7 @@ $items = $block->sources()->toStructure();
             'venturebeat.com' => 'venturebeat.png',
             'theverge.com' => 'theverge.png',
             'medium.com' => 'medium.png',
+            'arstechnica.com' => 'arstechnica.png',
             default => 'generic.svg',
         };
         $asset = asset('assets/sources/' . $icon)->resize(16 * 2, 16 * 2)->url();
