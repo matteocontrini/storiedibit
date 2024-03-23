@@ -28,7 +28,7 @@ slot();
                 </a>
             </h2>
             <p>
-                <?= smartypants($newsletter->text()->toBlocks()->first()) ?>
+                <?= preg_replace('#<a.*?>(.*?)</a>#i', '\1', smartypants($newsletter->text()->toBlocks()->first())) ?>
             </p>
             <a href="<?= $newsletter->url() ?>" class="underline">
                 Leggi tutto
