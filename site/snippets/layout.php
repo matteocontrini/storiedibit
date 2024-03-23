@@ -35,5 +35,12 @@
 
 </div>
 
+<script>
+    if (window.location.host !== 'storiedibit.it') {
+        window.goatcounter = {no_onload: true};
+    }
+</script>
+<script data-goatcounter="https://storiedibit.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+
 </body>
 </html>
