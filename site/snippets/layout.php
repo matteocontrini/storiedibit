@@ -28,8 +28,11 @@
         <p class="text-center text-gray-500 text-sm">
             © CC BY 4.0<br>
             Un progetto di <a class="underline" href="https://matteosonoio.it/it">Matteo Contrini</a>
-            •
+            <br>
+
             <a href="https://t.me/notedimatteo" class="underline" target="_blank">Canale Telegram</a>
+            •
+            <a href="mailto:info@storiedibit.it">Email</a>
         </p>
     </footer>
 

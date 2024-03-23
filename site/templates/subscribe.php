@@ -31,6 +31,10 @@ slot();
         <p class="text-center">
             A breve riceverai un'email con un link di conferma.
         </p>
+
+        <p class="text-center text-sm mt-6">
+            Se non ricevi l'email, controlla in spam o <a href="mailto:info@storiedibit.it">contattaci</a>.
+        </p>
     <?php elseif (isset($invalid) && $invalid): ?>
         <p class="text-center font-semibold">
             🤔 L'indirizzo email inserito non è valido.
@@ -48,6 +52,10 @@ slot();
     <?php else: ?>
         <p class="text-center font-semibold">
             ⚠️ Si è verificato un errore. Torna indietro e riprova.
+        </p>
+
+        <p class="text-center">
+            Se non riesci a iscriverti, <a href="mailto:info@storiedibit.it">contattaci</a>.
         </p>
     <?php endif ?>
 
