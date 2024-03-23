@@ -32,7 +32,7 @@
 
             <a href="https://t.me/notedimatteo" class="underline" target="_blank">Canale Telegram</a>
             •
-            <a href="mailto:info@storiedibit.it">Email</a>
+            <a href="mailto:matteo@storiedibit.it">Email</a>
         </p>
     </footer>
 

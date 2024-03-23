@@ -33,7 +33,7 @@ slot();
         </p>
 
         <p class="text-center text-sm mt-6">
-            Se non ricevi l'email, controlla in spam o <a href="mailto:info@storiedibit.it">contattaci</a>.
+            Se non ricevi l'email, controlla in spam o <a href="mailto:matteo@storiedibit.it">contattaci</a>.
         </p>
     <?php elseif (isset($invalid) && $invalid): ?>
         <p class="text-center font-semibold">
@@ -47,7 +47,7 @@ slot();
             🤔 L'indirizzo email inserito è già presente nella nostra lista.
         </p>
         <p class="text-center">
-            Se non ricevi le email, <a href="mailto:info@storiedibit.it">contattaci</a>.
+            Se non ricevi le email, <a href="mailto:matteo@storiedibit.it">contattaci</a>.
         </p>
     <?php else: ?>
         <p class="text-center font-semibold">
@@ -55,7 +55,7 @@ slot();
         </p>
 
         <p class="text-center">
-            Se non riesci a iscriverti, <a href="mailto:info@storiedibit.it">contattaci</a>.
+            Se non riesci a iscriverti, <a href="mailto:matteo@storiedibit.it">contattaci</a>.
         </p>
     <?php endif ?>
 
