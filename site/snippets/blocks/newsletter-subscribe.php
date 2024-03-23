@@ -4,7 +4,7 @@
       class="bg-accent rounded-lg p-10 my-14">
     <div class="absolute left-[-99999px]">
         <label for="name">Name</label>
-        <input type="url" id="name" name="name" tabindex="-1">
+        <input type="url" name="name" tabindex="-1">
     </div>
 
     <div class="flex flex-col items-center gap-5 max-w-full">
@@ -18,14 +18,14 @@
         </p>
 
         <div class="flex flex-col sm:flex-row gap-2 w-full">
-            <input type="email" id="email" name="email" required placeholder="Il tuo indirizzo email..."
+            <input type="email" name="email" required placeholder="Il tuo indirizzo email..."
                    class="rounded-lg px-4 h-12 text-center w-full">
             <input type="submit" name="submit" value="Iscriviti"
                    class="bg-white w-full sm:w-fit rounded-lg px-10 h-12 uppercase font-serif text-accent cursor-pointer">
         </div>
 
-        <label for="privacy" class="text-fuchsia-200 self-start text-xs">
-            <input type="checkbox" id="privacy" name="privacy" required>
+        <label for="privacy-<?= $block->id() ?>" class="text-fuchsia-200 self-start text-xs">
+            <input type="checkbox" id="privacy-<?= $block->id() ?>" name="privacy" required>
 
             <span>
                 Ho preso visione dell'<a href="<?= page('privacy')->url() ?>" class="underline">informativa sulla privacy</a>
