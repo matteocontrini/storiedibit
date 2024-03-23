@@ -38,6 +38,13 @@ slot();
         <p class="text-center">
             Torna indietro e riprova.
         </p>
+    <?php elseif (isset($exists) && $exists): ?>
+        <p class="text-center font-semibold">
+            🤔 L'indirizzo email inserito è già presente nella nostra lista.
+        </p>
+        <p class="text-center">
+            Se non ricevi le email, <a href="mailto:info@storiedibit.it">contattaci</a>.
+        </p>
     <?php else: ?>
         <p class="text-center font-semibold">
             ⚠️ Si è verificato un errore. Torna indietro e riprova.

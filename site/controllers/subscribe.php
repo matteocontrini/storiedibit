@@ -51,12 +51,10 @@ return function (Kirby\Cms\App $kirby) {
         $payload = $response->json();
 
         if ($payload['error']['code'] == 'MEMBER_EXISTS_WITH_EMAIL_ADDRESS') {
-            $resubscribed = resubscribe($email, $list_id, $api_key);
-            if ($resubscribed) {
-                return [
-                    'success' => true,
-                ];
-            }
+            return [
+                'success' => false,
+                'exists' => true,
+            ];
         }
 
         if (option('debug')) {
@@ -72,26 +70,3 @@ return function (Kirby\Cms\App $kirby) {
         'success' => false,
     ];
 };
-
-function resubscribe($email, $list_id, $api_key): bool
-{
-    $hash = md5(strtolower($email));
-
-    try {
-        $response = new Remote("https://emailoctopus.com/api/1.6/lists/$list_id/contacts/$hash", [
-            'method' => 'PUT',
-            'data' => [
-                'api_key' => $api_key,
-                'status' => 'PENDING',
-            ]
-        ]);
-    } catch (Exception $error) {
-        if (option('debug')) {
-            die($error->getMessage());
-        }
-
-        return false;
-    }
-
-    return $response->code() === 200;
-}
