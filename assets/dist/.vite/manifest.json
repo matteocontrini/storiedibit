@@ -36,12 +36,12 @@
     "src": "src/fonts/RecoletaSemiBold.woff2"
   },
   "src/main.ts": {
-    "file": "main-CXRQic6k.js",
+    "file": "main-BKPCw1qe.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
     "css": [
-      "main-BenIwLl8.css"
+      "main-BR2o80uz.css"
     ],
     "assets": [
       "inter-cyrillic-ext-wght-normal-DIEz8p5i.woff2",

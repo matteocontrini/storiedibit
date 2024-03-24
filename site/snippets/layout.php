@@ -31,7 +31,7 @@
 <hr class="my-20">
 
 <footer class="container my-16">
-    <p class="text-center text-gray-500 text-sm">
+    <p class="text-center text-sdb-gray-500 text-sm">
         © CC BY 4.0<br>
         Un progetto di <a class="underline" href="https://matteosonoio.it/it">Matteo Contrini</a>
         <br>
