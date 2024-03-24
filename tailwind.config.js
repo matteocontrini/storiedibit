@@ -12,7 +12,7 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['"Inter Variable"', ...defaultTheme.fontFamily.sans],
-        'serif': ['RecoletaMedium', '"Publico Text"', ...defaultTheme.fontFamily.serif],
+        'title': ['RecoletaMedium', '"Publico Text"', ...defaultTheme.fontFamily.serif],
         'blockquote': defaultTheme.fontFamily.serif,
         'article-headline': ['"Publico Headline"', ...defaultTheme.fontFamily.serif],
         'article-body': ['"Publico Text"', ...defaultTheme.fontFamily.sans],
@@ -34,17 +34,16 @@ export default {
           500: '#5A6B88',
         },
         accent: '#A731D1',
-        background: '#f5f5f5'
       }
     },
     container: {
       center: true,
       screens: {
-        sm: '640px',
-        md: '640px',
-        lg: '640px',
-        xl: '640px',
-        '2xl': '640px'
+        sm: '670px',
+        md: '670px',
+        lg: '670px',
+        xl: '670px',
+        '2xl': '670px'
       }
     }
   },

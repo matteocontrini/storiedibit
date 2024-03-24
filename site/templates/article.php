@@ -54,7 +54,7 @@ slot();
     <hr class="mt-5">
 </header>
 
-<main class="container mt-12" id="article-content">
+<main class="container mt-12 article">
     <?= smartypants($page->text()->toBlocks()) ?>
 </main>
 

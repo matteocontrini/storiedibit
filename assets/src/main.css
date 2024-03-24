@@ -18,77 +18,48 @@
 
 @layer base {
   h1 {
-    font-family: 'RecoletaSemiBold', 'Inter Variable', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    @apply text-5xl pt-20 pb-14;
+    @apply font-title text-center font-bold text-5xl pt-20 pb-14;
   }
 
   h2 {
-    font-family: 'RecoletaMedium', sans-serif;
+    @apply font-title mt-16 mb-8 mx-auto text-center text-3xl;
     font-weight: 850;
-    font-size: 30px;
     line-height: 33px;
-    display: flex;
-    width: fit-content;
-    @apply mt-16 mb-8 mx-auto;
   }
 
   h3 {
-    margin-top: 40px;
-    font-weight: 600;
-    font-size: 18px;
+    @apply mt-10 font-semibold text-lg;
   }
 
   p, ul, li {
+    @apply my-2.5;
     font-size: 17px;
     line-height: 28px;
-    color: #333;
-    margin: 10px 0;
   }
 
   p a, ul a {
-    /*color: #1535C9;*/
-    text-decoration: underline;
+    @apply underline;
   }
 
   ul {
-    list-style: disc inside;
+    @apply list-disc list-inside;
+
+    li p {
+      @apply inline;
+    }
+
+    li > ul {
+      @apply ml-5;
+    }
   }
 
   hr {
-    border-top: 1px solid theme('colors.sdb-gray.300');
+    @apply border-t border-gray-300;
   }
 
   figure {
     @apply my-5;
   }
-
-  blockquote {
-    background: theme('colors.sdb-gray.100');
-    padding: 25px 20px;
-    font-size: 24px;
-    line-height: 32px;
-    margin: 20px 0;
-    @apply font-blockquote text-center rounded-lg;
-
-    footer {
-      @apply block mt-5 font-sans text-center text-gray-600 text-sm;
-
-      a {
-        @apply underline;
-      }
-    }
-  }
-
-  ul li p {
-    display: inline;
-  }
-
-  li > ul {
-    margin-left: 20px;
-  }
-
 }
 
 @layer components {
@@ -96,11 +67,28 @@
     @apply px-4;
   }
 
-  #article-content {
+  .newsletter {
+    blockquote {
+      @apply bg-sdb-gray-100 my-5 font-blockquote text-center rounded-lg;
+      padding: 25px 20px;
+      font-size: 24px;
+      line-height: 32px;
+
+      footer {
+        @apply block mt-5 font-sans text-center text-gray-600 text-sm;
+
+        a {
+          @apply underline;
+        }
+      }
+    }
+  }
+
+  .article {
     p {
+      @apply font-article-body;
       font-size: 20px;
       line-height: 30px;
-      @apply font-article-body;
     }
   }
 }

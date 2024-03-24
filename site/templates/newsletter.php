@@ -20,8 +20,8 @@ slot();
 
     <hr class="my-14">
 
-    <div class="content">
-    <?= smartypants($page->text()->toBlocks()) ?>
+    <div class="newsletter">
+        <?= smartypants($page->text()->toBlocks()) ?>
     </div>
 </main>
 

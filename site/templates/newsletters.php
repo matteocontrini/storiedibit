@@ -23,9 +23,11 @@ slot();
                     <?= $newsletter->title() ?>
                 </a>
             </h2>
-            <p>
+
+            <div>
                 <?= preg_replace('#<a.*?>(.*?)</a>#i', '\1', smartypants($newsletter->text()->toBlocks()->first())) ?>
-            </p>
+            </div>
+
             <a href="<?= $newsletter->url() ?>" class="underline">
                 Leggi tutto
             </a>

@@ -28,7 +28,7 @@
 
 <?= $slot ?>
 
-<hr class="my-14 container">
+<hr class="my-20">
 
 <footer class="container my-16">
     <p class="text-center text-gray-500 text-sm">
