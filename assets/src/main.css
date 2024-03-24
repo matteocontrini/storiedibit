@@ -90,5 +90,9 @@
       font-size: 20px;
       line-height: 30px;
     }
+
+    h2 {
+      @apply font-article-headline text-left mt-8 mb-4 text-3xl;
+    }
   }
 }
