@@ -2,7 +2,7 @@ Title: Perché la censura degli indirizzi IP non può essere fatta con trasparen
 
 ----
 
-Summary: 
+Summary: L'Italia è da poco uno dei pochi paesi al mondo in cui la censura dei contenuti illegali su Internet viene fatta bloccando gli indirizzi IP. È un metodo che non si può applicare con trasparenza per limiti tecnici di come funziona il web.
 
 ----
 
