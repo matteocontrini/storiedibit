@@ -18,12 +18,11 @@
 
 @layer base {
   h1 {
-    @apply font-title text-center font-bold text-5xl pt-20 pb-14;
+    @apply font-title text-center text-5xl pt-20 pb-14;
   }
 
   h2 {
-    @apply font-title mt-16 mb-8 mx-auto text-center text-3xl;
-    font-weight: 850;
+    @apply font-title font-semibold mt-16 mb-8 mx-auto text-center text-3xl;
     line-height: 33px;
   }
 
