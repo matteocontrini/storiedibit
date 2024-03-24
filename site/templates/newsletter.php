@@ -23,6 +23,10 @@ slot();
     <div class="newsletter">
         <?= smartypants($page->text()->toBlocks()) ?>
     </div>
+
+    <p class="font-mono text-center text-sm text-sdb-gray-500">
+        &lt;/ in ~<?= $page->kilobytes() ?> kB &gt;
+    </p>
 </main>
 
 <?php endslot() ?>
