@@ -43,10 +43,14 @@ slot();
 </main>
 
 <script>
-    document.querySelectorAll('[data-like-block-id]').forEach(function (element) {
-        element.addEventListener('click', function () {
+    document.querySelectorAll('[data-like-block-id]').forEach((element) => {
+        element.addEventListener('click', () => {
+            if (element.classList.contains('selected')) {
+                return;
+            }
+
             const blockId = element.getAttribute('data-like-block-id');
-            element.remove();
+            element.classList.add('selected');
 
             fetch('<?= page()->url() ?>/like/' + blockId, {
                 method: 'POST',

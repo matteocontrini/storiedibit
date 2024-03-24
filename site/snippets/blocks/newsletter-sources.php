@@ -8,7 +8,7 @@ $items = $block->sources()->toStructure();
 ?>
 
 <div class="flex gap-x-2.5 gap-y-2 flex-wrap mt-4 mb-5">
-    <a class="bg-sdb-gray-200 hover:bg-sdb-gray-300 transition-colors px-2.5 py-1 rounded-lg text-sm font-semibold flex items-center gap-1.5 cursor-pointer"
+    <a class="sources-pill"
        data-like-block-id="<?= $lastSubsectionBlockId ?>">
         <img src="<?= asset('assets/like.svg')->url() ?>" alt="" class="w-4 h-4 rounded-sm">
         <span>
@@ -44,7 +44,7 @@ $items = $block->sources()->toStructure();
         };
         $asset = asset('assets/sources/' . $icon)->resize(16 * 2, 16 * 2)->url();
         ?>
-        <a class="bg-sdb-gray-200 hover:bg-sdb-gray-300 transition-colors px-2.5 py-1 rounded-lg text-sm font-semibold flex items-center gap-1.5"
+        <a class="sources-pill"
            href="<?= $item->url() ?>" target="_blank" rel="nofollow noopener">
             <img src="<?= $asset ?>" alt="" class="w-4 h-4 rounded-sm">
 

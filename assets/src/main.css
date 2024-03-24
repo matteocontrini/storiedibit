@@ -82,6 +82,18 @@
         }
       }
     }
+
+    .sources-pill {
+      @apply bg-sdb-gray-200 hover:bg-sdb-gray-300 transition-colors px-2.5 py-1 rounded-lg text-sm font-semibold flex items-center gap-1.5 cursor-pointer;
+
+      &.selected {
+        @apply bg-accent text-white;
+
+        img {
+          filter: invert(1);
+        }
+      }
+    }
   }
 
   .article {
