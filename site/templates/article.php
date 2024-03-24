@@ -9,23 +9,28 @@ slot();
 
 ?>
 
-<header class="mt-14 w-[1100px] mx-auto">
-    <div class="flex gap-x-5">
-        <span class="font-article-headline font-semibold text-3xl text-sdb-red">Reti</span>
-        <span class="font-article-headline font-semibold text-3xl text-sdb-brown">Cybersecurity</span>
-    </div>
+<header class="mt-14 w-[1100px] max-w-full px-4 mx-auto">
+    <?php if ($page->tags()->isNotEmpty()) : ?>
+        <div class="flex flex-wrap gap-x-4 md:gap-x-5">
+            <?php foreach ($page->tags()->split() as $tag) : ?>
+                <span class="font-article-headline font-semibold text-2xl md:text-3xl text-sdb-<?= tagColor($tag) ?>">
+                <?= tagName($tag) ?>
+            </span>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
 
-    <hr class="my-4">
+    <hr class="my-4 md:my-3">
 
-    <h1 class="p-0 font-article-headline font-extrabold text-left text-[64px] leading-[70px]">
+    <h1 class="p-0 font-article-headline font-bold text-left text-5xl md:text-6xl leading-[1.1]">
         <?= $page->title() ?>
     </h1>
 
-    <div class="font-article-headline text-[32px] mt-5 leading-snug">
+    <div class="font-article-headline text-2xl md:text-3xl mt-5 leading-snug">
         <?= $page->summary() ?>
     </div>
 
-    <div class="mt-5 uppercase flex gap-x-3 text-[15px]">
+    <div class="mt-5 uppercase flex flex-wrap gap-x-3 text-[15px]">
         <?php if ($page->authors()->isNotEmpty()) : ?>
             <span>
                 di

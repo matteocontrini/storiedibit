@@ -37,6 +37,11 @@ columns:
             type: users
           tags:
             type: tags
+            options:
+              - value: reti
+                text: Reti
+              - value: cybersecurity
+                text: Cybersecurity
       files:
         type: files
         info: "{{ file.dimensions }} - {{ file.nicesize }}"

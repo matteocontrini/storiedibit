@@ -17,6 +17,9 @@ export default {
         'article-headline': ['"Publico Headline"', ...defaultTheme.fontFamily.serif],
         'article-body': ['"Publico Text"', ...defaultTheme.fontFamily.sans],
       },
+      fontSize: {
+        '6xl': '4rem'
+      },
       colors: {
         sdb: {
           blue: '#07397E',
