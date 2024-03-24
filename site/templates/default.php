@@ -9,20 +9,10 @@ slot();
 
 ?>
 
-<header>
+<main class="container">
     <h1>
-        <a href="<?= $site->url() ?>">
-            <?= $site->title() ?>
-        </a>
-    </h1>
-</header>
-
-<hr class="my-14">
-
-<main>
-    <h2>
         <?= $page->title() ?>
-    </h2>
+    </h1>
 
     <?= $page->text()->smartypants() ?>
 </main>

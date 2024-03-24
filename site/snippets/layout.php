@@ -16,27 +16,31 @@
     <?= vite()->js('src/main.ts') ?>
     <?= vite()->css('src/main.ts') ?>
 </head>
-<body class="bg-background py-4">
+<body>
 
-<div class="container">
+<header>
+    <div class="flex items-center justify-center w-[1100px] max-w-full mx-auto h-full py-4">
+        <a href="<?= $site->url() ?>" class="font-semibold text-3xl font-article-headline">storie di bit</a>
+    </div>
 
-    <?= $slot ?>
+    <hr class="border-t-2"/>
+</header>
 
-    <hr class="my-14">
+<?= $slot ?>
 
-    <footer class="my-16">
-        <p class="text-center text-gray-500 text-sm">
-            © CC BY 4.0<br>
-            Un progetto di <a class="underline" href="https://matteosonoio.it/it">Matteo Contrini</a>
-            <br>
+<hr class="my-14 container">
 
-            <a href="https://t.me/notedimatteo" class="underline" target="_blank">Canale Telegram</a>
-            •
-            <a href="mailto:matteo@storiedibit.it">Email</a>
-        </p>
-    </footer>
+<footer class="container my-16">
+    <p class="text-center text-gray-500 text-sm">
+        © CC BY 4.0<br>
+        Un progetto di <a class="underline" href="https://matteosonoio.it/it">Matteo Contrini</a>
+        <br>
 
-</div>
+        <a href="https://t.me/notedimatteo" class="underline" target="_blank">Canale Telegram</a>
+        •
+        <a href="mailto:matteo@storiedibit.it">Email</a>
+    </p>
+</footer>
 
 <script>
     if (window.location.host !== 'storiedibit.it') {

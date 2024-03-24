@@ -9,17 +9,7 @@ slot();
 
 ?>
 
-<header>
-    <h1>
-        <a href="<?= $site->url() ?>">
-            <?= $site->title() ?>
-        </a>
-    </h1>
-</header>
-
-<hr class="my-14">
-
-<main>
+<main class="container mt-20">
     <p class="text-center">
         <strong>Storie di bit</strong> è una newsletter settimanale su Internet, intelligenza artificiale, reti,
         telecomunicazioni, digitale e cybersecurity.

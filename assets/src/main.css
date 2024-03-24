@@ -2,24 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: RecoletaMedium;
+  font-display: swap;
+  src: url(fonts/RecoletaMedium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: RecoletaSemiBold;
+  font-display: swap;
+  src: url(fonts/RecoletaSemiBold.woff2) format('woff2');
+}
+
+/* TODO: embed Publico */
+
 @layer base {
-  @font-face {
-    font-family: RecoletaMedium;
-    font-display: swap;
-    src: url(fonts/RecoletaMedium.woff2) format('woff2');
-  }
-
-  @font-face {
-    font-family: RecoletaSemiBold;
-    font-display: swap;
-    src: url(fonts/RecoletaSemiBold.woff2) format('woff2');
-  }
-
   h1 {
     font-family: 'RecoletaSemiBold', 'Inter Variable', sans-serif;
     font-weight: 700;
     text-align: center;
-    @apply text-5xl pt-20;
+    @apply text-5xl pt-20 pb-14;
   }
 
   h2 {
@@ -55,7 +57,7 @@
   }
 
   hr {
-    border-top: 1px solid #E5E7EB;
+    border-top: 1px solid theme('colors.sdb-gray.300');
   }
 
   figure {
@@ -63,7 +65,7 @@
   }
 
   blockquote {
-    background: #efefef;
+    background: theme('colors.sdb-gray.100');
     padding: 25px 20px;
     font-size: 24px;
     line-height: 32px;
@@ -90,6 +92,10 @@
 }
 
 @layer components {
+  .container {
+    @apply px-4;
+  }
+
   #article-content {
     p {
       font-size: 20px;

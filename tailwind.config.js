@@ -26,6 +26,13 @@ export default {
           brown: 'rgb(115, 3, 71)',
           teal: 'rgb(0, 96, 103)',
         },
+        'sdb-gray': {
+          100: '#FAFAFB',
+          200: '#F0F2F5',
+          300: '#DDE3EE',
+          400: '#B3BFD1',
+          500: '#5A6B88',
+        },
         accent: '#A731D1',
         background: '#f5f5f5'
       }

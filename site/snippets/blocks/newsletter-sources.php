@@ -35,7 +35,7 @@ $items = $block->sources()->toStructure();
         };
         $asset = asset('assets/sources/' . $icon)->resize(16 * 2, 16 * 2)->url();
         ?>
-        <a class="bg-gray-200 px-2.5 py-1 rounded-lg text-sm font-semibold flex items-center gap-1.5"
+        <a class="bg-sdb-gray-200 hover:bg-sdb-gray-300 transition-colors px-2.5 py-1 rounded-lg text-sm font-semibold flex items-center gap-1.5"
            href="<?= $item->url() ?>" target="_blank" rel="nofollow noopener">
             <img src="<?= $asset ?>" alt="" class="w-4 h-4 rounded-sm">
 

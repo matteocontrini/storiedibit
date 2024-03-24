@@ -4,6 +4,7 @@
 /** @var Kirby\Cms\Site $site */
 /** @var bool $success */
 /** @var bool $invalid */
+/** @var bool $exists */
 
 snippet('layout', slots: true);
 
@@ -11,17 +12,8 @@ slot();
 
 ?>
 
-<header>
-    <h1>
-        <a href="<?= $site->url() ?>">
-            <?= $site->title() ?>
-        </a>
-    </h1>
-</header>
-
-<hr class="my-14">
-
-<main>
+<main class="container">
+    <h1>Iscrizione newsletter</h1>
 
     <?php if ($success): ?>
         <p class="text-center font-semibold">

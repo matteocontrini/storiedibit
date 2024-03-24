@@ -3,7 +3,7 @@
 /** @var Kirby\Cms\Page $page */
 /** @var Kirby\Cms\Site $site */
 
-snippet('layout-article', slots: true);
+snippet('layout', slots: true);
 
 slot();
 
@@ -17,7 +17,7 @@ slot();
 
     <hr class="my-4">
 
-    <h1 class="pt-0 font-article-headline font-extrabold text-left text-[64px] leading-[70px]">
+    <h1 class="p-0 font-article-headline font-extrabold text-left text-[64px] leading-[70px]">
         <?= $page->title() ?>
     </h1>
 

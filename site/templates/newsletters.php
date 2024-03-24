@@ -9,21 +9,17 @@ slot();
 
 ?>
 
-<header>
+<main class="container">
     <h1>
-        <a href="<?= $site->url() ?>">
-            <?= $site->title() ?>
-        </a>
+        Archivio newsletter
     </h1>
-</header>
 
-<hr class="my-14">
+    <hr class="mb-14">
 
-<main>
     <?php foreach (page('newsletter')->children()->listed()->sortBy('num', 'desc') as $newsletter): ?>
         <article>
             <h2>
-                <a href="<?= $newsletter->url() ?>">
+                <a href="<?= $newsletter->url() ?>" class="underline">
                     <?= $newsletter->title() ?>
                 </a>
             </h2>

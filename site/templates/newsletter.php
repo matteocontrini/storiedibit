@@ -9,22 +9,20 @@ slot();
 
 ?>
 
-<header>
-    <h1>
-        <a href="<?= $site->url() ?>">
-            <?= $site->title() ?>
-        </a>
+<main class="container">
+    <h1 class="pb-0">
+        Le storie della settimana
     </h1>
 
     <div class="text-center mt-2 font-mono">
         <?= $page->title()->toDate('d MMMM y') ?>
     </div>
-</header>
 
-<hr class="my-14">
+    <hr class="my-14">
 
-<main>
+    <div class="content">
     <?= smartypants($page->text()->toBlocks()) ?>
+    </div>
 </main>
 
 <?php endslot() ?>
