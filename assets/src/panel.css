@@ -38,3 +38,17 @@
   font-weight: 600;
   padding-left: 20px;
 }
+
+/* Summary textarea */
+[data-template=article] .k-field-name-summary textarea {
+  font-family: 'Publico Headline', serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* Text block */
+[data-template=article] .k-block-type-text p {
+  font-family: 'Publico Text', serif;
+  font-size: 20px;
+  line-height: 30px;
+}

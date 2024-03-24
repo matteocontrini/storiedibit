@@ -22,11 +22,11 @@ slot();
 
     <hr class="my-4 md:my-3">
 
-    <h1 class="p-0 font-article-headline font-bold text-left text-5xl md:text-6xl leading-[1.1]">
+    <h1 class="p-0 font-article-headline font-bold text-left text-5xl md:text-6xl leading-article-title">
         <?= $page->title() ?>
     </h1>
 
-    <div class="font-article-headline text-2xl md:text-3xl mt-5 leading-snug">
+    <div class="font-article-headline text-2xl md:text-3xl mt-5 !leading-article-summary">
         <?= $page->summary() ?>
     </div>
 

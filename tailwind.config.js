@@ -20,6 +20,10 @@ export default {
       fontSize: {
         '6xl': '4rem'
       },
+      lineHeight: {
+        'article-title': '1',
+        'article-summary': '1.3',
+      },
       colors: {
         sdb: {
           blue: '#07397E',
