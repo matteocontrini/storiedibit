@@ -20,7 +20,9 @@
 
 <header>
     <div class="flex items-center justify-center w-[1100px] max-w-full mx-auto h-full py-4">
-        <a href="<?= $site->url() ?>" class="font-semibold text-3xl font-title">storie di bit</a>
+        <a href="<?= $site->url() ?>" class="font-semibold text-3xl font-title">
+            <img src="<?= asset('assets/logo.png')->resize(200 * 2)->url() ?>" alt="<?= $site->title() ?>" width="200">
+        </a>
     </div>
 
     <hr/>
