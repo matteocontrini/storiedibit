@@ -6,7 +6,7 @@ Summary: L'Italia è da poco uno dei pochi paesi al mondo in cui la censura dei 
 
 ----
 
-Text: 
+Text: [{"content":{"text":"<p>Da inizio febbraio è operativa in Italia la nuova piattaforma Piracy Shield</p>"},"id":"c8df4fd4-1879-4b69-8938-14d29aff5b5a","isHidden":false,"type":"text"}]
 
 ----
 
