@@ -1,4 +1,4 @@
-Title: Perché la censura degli indirizzi IP non può funzionare: i limiti tecnici
+Title: Perché la censura degli indirizzi IP non può essere fatta con trasparenza: i limiti tecnici
 
 ----
 
