@@ -32,6 +32,9 @@ columns:
         headline: Number
         icon: list-numbers
         text: "{{ page.num }}"
+      stats:
+        type: stats
+        reports: page.likesReports
       files:
         type: files
         info: "{{ file.dimensions }} - {{ file.nicesize }}"

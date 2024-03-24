@@ -50,6 +50,32 @@ $config = [
                 return false;
             }
         ],
+        // Newsletter like
+        [
+            'pattern' => 'newsletter/(:any)/like/(:any)',
+            'method' => 'POST',
+            'action' => function ($id, $blockUuid) {
+                $page = page('newsletter/' . $id);
+
+                if (!$page) {
+                    return false;
+                }
+
+                $block = $page->text()->toBlocks()->find($blockUuid);
+
+                if (!$block || $block->type() !== 'newsletter-subsection') {
+                    return false;
+                }
+
+                // Append a line with block uuid and current date
+                $statsPath = $page->root() . '/likes.csv';
+                file_put_contents($statsPath, $blockUuid . ',' . time() . PHP_EOL, FILE_APPEND | LOCK_EX);
+
+                return [
+                    'status' => 'ok'
+                ];
+            }
+        ]
     ],
     'thathoff.git-content.commitMessage' => '[content] :action: :item: `:url:`'
 ];
