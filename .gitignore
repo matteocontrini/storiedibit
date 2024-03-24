@@ -18,3 +18,5 @@ node_modules
 /site/config/.license
 
 /site/config/secrets.php
+
+/content/**/likes.csv
