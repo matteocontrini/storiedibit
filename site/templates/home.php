@@ -36,7 +36,7 @@ slot();
                 <input type="email" id="email" name="email" required placeholder="Il tuo indirizzo email..."
                        class="rounded-lg px-4 h-12 text-center w-full">
                 <input type="submit" name="submit" value="Iscriviti"
-                       class="bg-white w-full sm:w-fit rounded-lg px-10 h-12 uppercase font-serif text-accent cursor-pointer">
+                       class="bg-white w-full sm:w-fit rounded-lg px-10 h-12 uppercase font-title text-accent cursor-pointer">
             </div>
 
             <label for="privacy" class="text-fuchsia-200 self-start text-xs">
