@@ -12,8 +12,10 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['"Inter Variable"', ...defaultTheme.fontFamily.sans],
-        'serif': ['RecoletaMedium', 'Publico Text', ...defaultTheme.fontFamily.serif],
-        'blockquote': defaultTheme.fontFamily.serif
+        'serif': ['RecoletaMedium', '"Publico Text"', ...defaultTheme.fontFamily.serif],
+        'blockquote': defaultTheme.fontFamily.serif,
+        'article-headline': ['"Publico Headline"', ...defaultTheme.fontFamily.serif],
+        'article-body': ['"Publico Text"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         sdb: {
@@ -24,7 +26,8 @@ export default {
           brown: 'rgb(115, 3, 71)',
           teal: 'rgb(0, 96, 103)',
         },
-        accent: '#A731D1'
+        accent: '#A731D1',
+        background: '#f5f5f5'
       }
     },
     container: {

@@ -1,0 +1,45 @@
+blueprint: page
+
+title: Newsletter
+
+columns:
+  main:
+    width: 2/3
+    fields:
+      summary:
+        type: textarea
+        buttons: false
+      text:
+        type: blocks
+        fieldsets:
+          - text
+          - heading
+          - image
+          - quote
+          - code
+          - markdown
+          - gallery
+          - line
+          - video
+          - list
+
+  sidebar:
+    width: 1/3
+    sections:
+      meta:
+        type: fields
+        fields:
+          date:
+            type: date
+            time: true
+            default: now
+          authors:
+            type: users
+          tags:
+            type: tags
+      files:
+        type: files
+        info: "{{ file.dimensions }} - {{ file.nicesize }}"
+        image:
+          back: white
+          cover: true

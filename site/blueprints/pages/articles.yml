@@ -1,0 +1,32 @@
+blueprint: page
+
+title: Articoli
+icon: text
+
+columns:
+  left:
+    width: 1/2
+    sections:
+      drafts:
+        type: pages
+        template: article
+        parent: kirby.page("articles")
+        label: Drafts
+        status: draft
+
+      unlisted:
+        type: pages
+        template: article
+        parent: kirby.page("articles")
+        label: In Review
+        status: unlisted
+
+  right:
+    width: 1/2
+    sections:
+      listed:
+        type: pages
+        template: article
+        parent: kirby.page("articles")
+        label: Published
+        status: listed

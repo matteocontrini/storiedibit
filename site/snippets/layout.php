@@ -16,7 +16,7 @@
     <?= vite()->js('src/main.ts') ?>
     <?= vite()->css('src/main.ts') ?>
 </head>
-<body>
+<body class="bg-background py-4">
 
 <div class="container">
 

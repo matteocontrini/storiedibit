@@ -16,6 +16,7 @@ $config = [
     ],
     'locale' => 'it_IT.utf-8',
     'routes' => [
+        // Newsletter short links
         [
             'pattern' => '(:num)',
             'action' => function ($num) {
@@ -26,7 +27,29 @@ $config = [
 
                 $this->next();
             }
-        ]
+        ],
+        // Custom route for articles
+        [
+            'pattern' => 'articoli/(:num)/(:num)/(:any)-(:alphanum)',
+            'action' => function ($year, $month, $slug, $uuid) {
+                $page = page('articles')->find('page://' . $uuid);
+                if ($page) {
+                    if ($page->slug() != $slug) {
+                        go($page->url(), 301);
+                    }
+                    return $page;
+                }
+
+                return false;
+            }
+        ],
+        // Disable default articles route
+        [
+            'pattern' => 'articles/(:any)',
+            'action' => function ($slug) {
+                return false;
+            }
+        ],
     ],
     'thathoff.git-content.commitMessage' => '[content] :action: :item: `:url:`'
 ];
