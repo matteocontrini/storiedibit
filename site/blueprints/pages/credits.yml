@@ -1,0 +1,11 @@
+title: Credits
+
+icon: quote
+
+options:
+  changeStatus: false
+
+fields:
+  text:
+    label: Text
+    type: writer

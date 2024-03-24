@@ -1,7 +1,7 @@
 blueprint: page
 
 title: Newsletter
-icon: 📚
+icon: text-left
 
 columns:
   left:

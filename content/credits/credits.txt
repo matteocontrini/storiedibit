@@ -1,0 +1,9 @@
+Title: Credits
+
+----
+
+Text: <p>Le icone sono di:</p><ul><li><p>Dmitriy Bunin, CC BY 4.0, <a href="https://www.iconfinder.com/icons/8134642/like_thumb_thumbs_up_vote_icon">https://www.iconfinder.com/icons/8134642/like_thumb_thumbs_up_vote_icon</a></p></li><li><p>RemixIcon, CC BY 4.0, <a href="https://www.iconfinder.com/icons/8679829/external_link_icon">https://www.iconfinder.com/icons/8679829/external_link_icon</a></p></li></ul>
+
+----
+
+Uuid: aFmDZ590Vqj9UVPP
