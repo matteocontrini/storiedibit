@@ -53,7 +53,7 @@ $config = [
         // Newsletter like
         [
             'pattern' => 'newsletter/(:any)/like/(:any)',
-            'method' => 'POST',
+            'method' => 'GET|POST',
             'action' => function ($id, $blockUuid) {
                 $page = page('newsletter/' . $id);
 
@@ -71,9 +71,38 @@ $config = [
                 $statsPath = $page->root() . '/likes.csv';
                 file_put_contents($statsPath, $blockUuid . ',' . time() . PHP_EOL, FILE_APPEND | LOCK_EX);
 
-                return [
-                    'status' => 'ok'
-                ];
+                if (kirby()->request()->is('POST')) {
+                    return [
+                        'status' => 'ok'
+                    ];
+                } else {
+                    return page('liked');
+                }
+            }
+        ],
+        // Newsletter images
+        [
+            'pattern' => 'newsletter/(:any)/image/(:any)/(:alpha)',
+            'action' => function ($id, $uuid, $size) {
+                $page = page('newsletter/' . $id);
+
+                if (!$page) {
+                    return false;
+                }
+
+                $image = $page->files()->find('file://' . $uuid);
+
+                if (!$image) {
+                    return false;
+                }
+
+                if ($size == 'preview') {
+                    $url = $image->resize(640 * 2)->url();
+                } else {
+                    $url = $image->url();
+                }
+
+                go($url);
             }
         ]
     ],

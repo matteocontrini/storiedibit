@@ -25,13 +25,14 @@ export default {
         'article-summary': '1.3',
       },
       colors: {
+        // Remember to change these in mjml too!
         sdb: {
           blue: '#07397E',
           violet: '#3c00bd',
-          sky: 'rgb(1, 127, 167)',
-          red: 'rgb(192, 0, 0)',
-          brown: 'rgb(115, 3, 71)',
-          teal: 'rgb(0, 96, 103)',
+          sky: '#017fa7',
+          red: '#c00000',
+          brown: '#730347',
+          teal: '#006067',
         },
         'sdb-gray': {
           100: '#FAFAFB',
