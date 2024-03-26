@@ -23,12 +23,12 @@
         <meta property="og:title" content="Storie di bit">
         <meta property="og:description"
               content="Una newsletter settimanale su Internet, intelligenza artificiale, reti, telecomunicazioni, digitale e cybersecurity.">
-        <meta property="og:image" content="<?= asset('assets/opengraph.png')->url() ?>">
+        <meta property="og:image" content="<?= assetV('assets/opengraph.png') ?>">
     <?php endif ?>
 
-    <link rel="icon" href="<?= asset('assets/favicon-32.png')->url() ?>" type="image/png" sizes="32x32"/>
-    <meta property="og:logo" content=<?= asset('assets/favicon-500.png')->url() ?>/>
-    <link rel="apple-touch-icon" sizes="180x180" href=<?= asset('assets/favicon-180')->url() ?>/>
+    <link rel="icon" href="<?= assetV('assets/favicon-32.png') ?>" type="image/png" sizes="32x32"/>
+    <meta property="og:logo" content="<?= assetV('assets/favicon-500.png') ?>"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= assetV('assets/favicon-180') ?>"/>
 </head>
 <body>
 
