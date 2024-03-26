@@ -15,6 +15,16 @@
 
     <?= vite()->js('src/main.ts') ?>
     <?= vite()->css('src/main.ts') ?>
+
+    <?php if ($page->isHomePage()): ?>
+        <meta property="og:site_name" content="Storie di bit">
+        <meta property="og:url" content="https://storiedibit.it">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Storie di bit">
+        <meta property="og:description"
+              content="Una newsletter settimanale su Internet, intelligenza artificiale, reti, telecomunicazioni, digitale e cybersecurity.">
+        <meta property="og:image" content="<?= asset('assets/opengraph.png')->url() ?>">
+    <?php endif ?>
 </head>
 <body>
 
