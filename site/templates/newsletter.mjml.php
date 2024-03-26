@@ -54,9 +54,6 @@ $mjml = '<mjml>
       .pill {
         background-color: #F0F2F5;
       }
-      .pill td {
-        border-radius: 10px;
-      }
       .sources > table {
         margin: 0 6px 6px 0;
       }
