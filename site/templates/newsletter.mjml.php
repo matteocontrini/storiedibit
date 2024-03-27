@@ -31,6 +31,8 @@ function sdbColor(string $name): string
 
 // TODO: <mj-preview>?
 
+// TODO: "Questa email è molto lunga e potrebbe essere tagliata dalla tua app email verso la fine. Se preferisici, puoi leggerla online."
+
 $mjml = '<mjml>
   <mj-head>
     <mj-font name="RecoletaMedium" href="' . $fontsCss . '" />
@@ -112,6 +114,8 @@ foreach ($blocks as $block) {
         </mj-section><mj-section><mj-column>';
     } else if ($block->type() == 'newsletter-sources') {
         $mjml .= '<mj-social>';
+        // TODO: need permalink
+        // TODO: no svg!
         $mjml .= '<mj-social-element src="' . asset('assets/like.svg')->url() . '" href="' . $page->url() . '/like/' . $lastSubsectionBlockId . '">Mi piace</mj-social-element>';
         foreach ($block->sources()->toStructure() as $source) {
             // TODO: need permalink
@@ -126,11 +130,11 @@ $mjml .= '
 <mj-divider padding="60px 16px"></mj-divider>
 
 <mj-text>
-Se questa newsletter ti è piacuta, inoltrala a un amico o a un collega. Se non sei già iscritto, <a href="' . $kirby->url() . '" target="_blank">puoi farlo qui</a>.
+Se questa newsletter ti è piacuta, inoltrala a un amico o a un collega. Per iscriverti, <a href="' . $kirby->url() . '" target="_blank">premi qui</a>.
 </mj-text>
 
 <mj-text>
-Se vuoi dirmi qualcosa, rispondi pure a questa email.
+Se vuoi dirmi qualcosa, rispondi pure a questa email!
 </mj-text>
 
 <mj-text>
@@ -166,8 +170,4 @@ if ($output === null) {
     throw new Exception('MJML failed to execute');
 }
 
-die($output);
-
-echo '<pre>';
-echo htmlspecialchars($output);
-echo '</pre>';
+echo $output;
