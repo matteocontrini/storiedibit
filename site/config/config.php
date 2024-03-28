@@ -104,7 +104,25 @@ $config = [
 
                 go($url);
             }
-        ]
+        ],
+        // Newletter like image
+        [
+            'pattern' => 'assets/email/like.png',
+            'action' => function () {
+                $size = 16 * 2;
+                $url = asset('assets/like.png')->resize($size, $size)->url();
+                go($url);
+            }
+        ],
+        // Newsletter sources icons
+        [
+            'pattern' => 'assets/email/sources/(:any)',
+            'action' => function ($icon) {
+                $size = 16 * 2;
+                $url = asset('assets/sources/' . $icon)->resize($size, $size)->url();
+                go($url);
+            }
+        ],
     ],
     'thathoff.git-content.commitMessage' => '[content] :action: :item: `:url:`'
 ];

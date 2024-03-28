@@ -24,7 +24,7 @@ function urlToIconFileName(string $url)
         'theverge.com' => 'theverge.png',
         'medium.com' => 'medium.png',
         'arstechnica.com' => 'arstechnica.png',
-        default => 'generic.svg',
+        default => 'generic.png',
     };
 }
 

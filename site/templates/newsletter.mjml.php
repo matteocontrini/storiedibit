@@ -27,11 +27,9 @@ function sdbColor(string $name): string
     return $colors[$name];
 }
 
-// TODO: load Inter?
-
 // TODO: <mj-preview>?
 
-// TODO: "Questa email è molto lunga e potrebbe essere tagliata dalla tua app email verso la fine. Se preferisici, puoi leggerla online."
+// TODO: "Questa email è molto lunga e potrebbe essere tagliata verso la fine in base all'app che stai usando. Se preferisici, puoi leggerla online."
 
 $mjml = '<mjml>
   <mj-head>
@@ -113,14 +111,13 @@ foreach ($blocks as $block) {
           </mj-column>
         </mj-section><mj-section><mj-column>';
     } else if ($block->type() == 'newsletter-sources') {
+        $likeImage = $kirby->url('assets') . '/email/like.png'; // this is a route
+
         $mjml .= '<mj-social>';
-        // TODO: need permalink
-        // TODO: no svg!
-        $mjml .= '<mj-social-element src="' . asset('assets/like.svg')->url() . '" href="' . $page->url() . '/like/' . $lastSubsectionBlockId . '">Mi piace</mj-social-element>';
+        $mjml .= '<mj-social-element src="' . $likeImage . '" href="' . $page->url() . '/like/' . $lastSubsectionBlockId . '">Mi piace</mj-social-element>';
         foreach ($block->sources()->toStructure() as $source) {
-            // TODO: need permalink
-            $asset = asset('assets/sources/' . urlToIconFileName($source->url()))->resize(16 * 2, 16 * 2)->url();
-            $mjml .= '<mj-social-element src="' . $asset . '" href="' . $source->url() . '">' . $source->name() . '</mj-social-element>';
+            $iconImage = $kirby->url('assets') . '/email/sources/' . urlToIconFileName($source->url()); // this is a route
+            $mjml .= '<mj-social-element src="' . $iconImage . '" href="' . $source->url() . '">' . $source->name() . '</mj-social-element>';
         }
         $mjml .= '</mj-social>';
     }
