@@ -1,0 +1,5 @@
+Uuid: 8KB3058DMTlPK1yY
+
+----
+
+Template: blocks/image
