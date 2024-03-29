@@ -51,6 +51,9 @@ $mjml = '<mjml>
         color: #000000;
         text-decoration: underline;
       }
+      b, strong {
+        font-weight: 600;
+      }
       .pill {
         background-color: #F0F2F5;
       }
