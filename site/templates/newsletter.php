@@ -52,9 +52,15 @@ slot();
             const blockId = element.getAttribute('data-like-block-id');
             element.classList.add('selected');
 
-            fetch('<?= page()->url() ?>/like/' + blockId, {
-                method: 'POST',
-            });
+            fetch('<?= page()->url() ?>/like/' + blockId, {method: 'POST'})
+                .then((response) => {
+                    if (!response.ok) {
+                        alert('Si è verificato un errore.');
+                    }
+                })
+                .catch(() => {
+                    alert('Si è verificato un errore.');
+                });
         });
     });
 </script>
