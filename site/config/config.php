@@ -55,7 +55,7 @@ $config = [
             'pattern' => 'newsletter/(:any)/like/(:any)',
             'method' => 'GET|POST',
             'action' => function ($id, $blockUuid) {
-                $page = page('newsletter/' . $id);
+                $page = page('newsletter')->findPageOrDraft($id);
 
                 if (!$page) {
                     return false;
@@ -84,7 +84,7 @@ $config = [
         [
             'pattern' => 'newsletter/(:any)/image/(:any)/(:alpha)',
             'action' => function ($id, $uuid, $size) {
-                $page = page('newsletter/' . $id);
+                $page = page('newsletter')->findPageOrDraft($id);
 
                 if (!$page) {
                     return false;
