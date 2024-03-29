@@ -28,7 +28,7 @@
 
     <link rel="icon" href="<?= assetV('assets/favicon-32.png') ?>" type="image/png" sizes="32x32"/>
     <meta property="og:logo" content="<?= assetV('assets/favicon-500.png') ?>"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= assetV('assets/favicon-180') ?>"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= assetV('assets/favicon-180.png') ?>"/>
 </head>
 <body>
 
