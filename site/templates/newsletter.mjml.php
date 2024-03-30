@@ -29,8 +29,6 @@ function sdbColor(string $name): string
 
 // TODO: <mj-preview>?
 
-// TODO: "Questa email è molto lunga e potrebbe essere tagliata verso la fine in base all'app che stai usando. Se preferisici, puoi leggerla online."
-
 $mjml = '<mjml>
   <mj-head>
     <mj-font name="RecoletaMedium" href="' . $fontsCss . '" />
@@ -74,6 +72,7 @@ $mjml = '<mjml>
 ';
 
 $lastSubsectionBlockId = null;
+$subscribeBlockCount = 0;
 
 $mjml .= '<mj-section><mj-column>';
 foreach ($blocks as $block) {
@@ -123,6 +122,13 @@ foreach ($blocks as $block) {
             $mjml .= '<mj-social-element src="' . $iconImage . '" href="' . $source->url() . '">' . $source->name() . '</mj-social-element>';
         }
         $mjml .= '</mj-social>';
+    } else if ($block->type() == 'newsletter-subscribe') {
+        if ($subscribeBlockCount === 0) {
+            $mjml .= '<mj-text padding="30px 16px 20px 16px" font-style="italic">
+                Questa email è molto lunga e in base all\'app che stai usando potrebbe essere tagliata verso la fine. Se preferisici, <a href="https://storiedibit.it/newsletter/2024-03-31" target="_blank">puoi leggerla online</a>.
+            </mj-text>';
+        }
+        $subscribeBlockCount++;
     }
 }
 
@@ -130,7 +136,7 @@ $mjml .= '
 <mj-divider padding="60px 16px"></mj-divider>
 
 <mj-text>
-Se questa newsletter ti è piacuta, inoltrala a un amico o a un collega. Per iscriverti, <a href="' . $kirby->url() . '" target="_blank">premi qui</a>.
+Se questa newsletter ti è piacuta, inoltrala a un amico o a un collega. <a href="' . $kirby->url() . '" target="_blank">Ci si iscrive qua</a>.
 </mj-text>
 
 <mj-text>
