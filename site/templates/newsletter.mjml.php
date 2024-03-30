@@ -77,17 +77,17 @@ $subscribeBlockCount = 0;
 $mjml .= '<mj-section><mj-column>';
 foreach ($blocks as $block) {
     if ($block->type() === 'newsletter-section') {
-        $mjml .= '<mj-text mj-class="h2" color="' . sdbColor($block->color()) . '"><span id="' . $block->text()->slug() . '">' . $block->text() . '</span></mj-text>';
+        $mjml .= '<mj-text mj-class="h2" color="' . sdbColor($block->color()) . '"><span id="' . $block->text()->slug() . '">' . $block->text()->smartypants() . '</span></mj-text>';
     } else if ($block->type() === 'newsletter-subsection') {
-        $mjml .= '<mj-text mj-class="h3">• ' . $block->text() . '</mj-text>';
+        $mjml .= '<mj-text mj-class="h3">• ' . $block->text()->smartypants() . '</mj-text>';
         $lastSubsectionBlockId = $block->id();
     } else if ($block->type() === 'text') {
-        $text = $block->text();
+        $text = $block->text()->smartypants();
         // Replace <p> with <mj-text>
         $text = preg_replace('/<p>(.*?)<\/p>/', '<mj-text>$1</mj-text>', $text);
         $mjml .= $text;
     } else if ($block->type() == 'list') {
-        $text = $block->text();
+        $text = $block->text()->smartypants();
         // Replace <li> with <mj-text>
         $text = preg_replace('/<li>(.*?)<\/li>/', '<mj-text>• $1</mj-text>', $text);
         // Remove <ul> and </ul>
@@ -104,11 +104,11 @@ foreach ($blocks as $block) {
         $mjml .= '</mj-column></mj-section><mj-section padding="0 16px 10px 16px">
           <mj-column background-color="#f5f5f5" padding="20px">
             <mj-text font-family="Georgia, serif" align="center" font-size="24px" line-height="32px">
-              ' . $block->text() . '
+              ' . $block->text()->smartypants() . '
             </mj-text>
     
             <mj-text align="center" font-size="14px" padding-bottom="0">
-                ' . $block->citation() . '
+                ' . $block->citation()->smartypants() . '
             </mj-text>
           </mj-column>
         </mj-section><mj-section><mj-column>';
@@ -125,7 +125,7 @@ foreach ($blocks as $block) {
     } else if ($block->type() == 'newsletter-subscribe') {
         if ($subscribeBlockCount === 0) {
             $mjml .= '<mj-text padding="30px 16px 20px 16px" font-style="italic">
-                Questa email è molto lunga e in base all\'app che stai usando potrebbe essere tagliata verso la fine. Se preferisici, <a href="https://storiedibit.it/newsletter/2024-03-31" target="_blank">puoi leggerla online</a>.
+                Questa email è molto lunga e in base all’app che stai usando potrebbe essere tagliata verso la fine. Se preferisici, <a href="https://storiedibit.it/newsletter/2024-03-31" target="_blank">puoi leggerla online</a>.
             </mj-text>';
         }
         $subscribeBlockCount++;
