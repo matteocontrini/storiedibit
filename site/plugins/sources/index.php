@@ -24,6 +24,9 @@ function urlToIconFileName(string $url)
         'theverge.com' => 'theverge.png',
         'medium.com' => 'medium.png',
         'arstechnica.com' => 'arstechnica.png',
+        'ilsole24ore.com' => 'ilsole24ore.png',
+        'openai.com' => 'openai.png',
+        'blog.cloudflare.com' => 'cloudflare.png',
         default => 'generic.png',
     };
 }
