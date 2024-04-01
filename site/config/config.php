@@ -67,16 +67,19 @@ $config = [
                     return false;
                 }
 
-                // Append a line with block uuid and current date
-                $statsPath = $page->root() . '/likes.csv';
-                file_put_contents($statsPath, $blockUuid . ',' . time() . PHP_EOL, FILE_APPEND | LOCK_EX);
-
                 if (kirby()->request()->is('POST')) {
+                    // Append a line with block uuid and current date
+                    $statsPath = $page->root() . '/likes.csv';
+                    file_put_contents($statsPath, $blockUuid . ',' . time() . PHP_EOL, FILE_APPEND | LOCK_EX);
+
                     return [
                         'status' => 'ok'
                     ];
                 } else {
-                    return page('liked');
+                    return page('like')->render([
+                        'pageId' => $id,
+                        'blockId' => $blockUuid
+                    ]);
                 }
             }
         ],
