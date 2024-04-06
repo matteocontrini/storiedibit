@@ -126,6 +126,8 @@ foreach ($blocks as $block) {
         if ($subscribeBlockCount === 0) {
             $mjml .= '<mj-text padding="30px 16px 20px 16px" font-style="italic">
                 Questa email è molto lunga e in base all’app che stai usando potrebbe essere tagliata verso la fine. Se preferisici, <a href="https://storiedibit.it/newsletter/2024-03-31" target="_blank">puoi leggerla online</a>.
+                <br><br>
+                Se ti piace, inoltrala a un amico o a un collega. Potrà iscriversi <a href="' . $kirby->url() . '" target="_blank">qua</a>.
             </mj-text>';
         }
         $subscribeBlockCount++;
