@@ -70,7 +70,12 @@ $config = [
                 if (kirby()->request()->is('POST')) {
                     // Append a line with block uuid and current date
                     $statsPath = $page->root() . '/likes.csv';
-                    file_put_contents($statsPath, $blockUuid . ',' . time() . PHP_EOL, FILE_APPEND | LOCK_EX);
+
+                    $date = new DateTime();
+                    $date->setTimezone(new DateTimeZone('Europe/Rome'));
+                    $ts = $date->format(DateTimeInterface::ATOM);
+
+                    file_put_contents($statsPath, $blockUuid . ',' . $ts . PHP_EOL, FILE_APPEND | LOCK_EX);
 
                     return [
                         'status' => 'ok'
