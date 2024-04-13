@@ -25,7 +25,15 @@ slot();
             </h2>
 
             <div>
-                <?= preg_replace('#<a.*?>(.*?)</a>#i', '\1', smartypants($newsletter->text()->toBlocks()->first())) ?>
+                <?php
+                $blocks = $newsletter->text()->toBlocks();
+                $text = $blocks->first();
+                if ($newsletter->title() == '2024-03-31') {
+                    $text = $blocks->nth(2);
+                }
+                $text = preg_replace('#<a.*?>(.*?)</a>#i', '\1', smartypants($text));
+                echo $text;
+                ?>
             </div>
 
             <a href="<?= $newsletter->url() ?>" class="underline">
