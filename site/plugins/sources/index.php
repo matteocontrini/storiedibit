@@ -27,6 +27,8 @@ function urlToIconFileName(string $url)
         'ilsole24ore.com' => 'ilsole24ore.png',
         'openai.com' => 'openai.png',
         'blog.cloudflare.com' => 'cloudflare.png',
+        'nytimes.com' => 'nytimes.png',
+        'wsj.com' => 'wsj.png',
         default => 'generic.png',
     };
 }
