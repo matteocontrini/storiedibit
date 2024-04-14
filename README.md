@@ -51,7 +51,7 @@ Enter the container and setup git:
 ```bash
 sudo docker-compose -f ../deploy/storiedibit/app/docker-compose.prod.yml exec --user application kirby /bin/bash
 git config user.name "Matteo Contrini"
-git config user.email "matteo@contrini.it"
+git config user.email "matteo@storiedibit.it"
 ```
 
 Create the `site/config/secrets.php` config file with:

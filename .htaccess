@@ -28,6 +28,19 @@ RewriteRule ^kirby/(.*) index.php [L]
 # block access to the src folder
 RewriteRule ^assets/src/(.*) index.php [L]
 
+# block other stuff
+RewriteRule ^Dockerfile$ index.php [L]
+RewriteRule ^README.md$ index.php [L]
+RewriteRule ^composer.json$ index.php [L]
+RewriteRule ^docker-compose\.dev\.yml$ index.php [L]
+RewriteRule ^docker-compose\.prod\.yml$ index.php [L]
+RewriteRule ^package\.json$ index.php [L]
+RewriteRule ^package-lock\.json$ index.php [L]
+RewriteRule ^postcss\.config\.js$ index.php [L]
+RewriteRule ^tailwind\.config\.js$ index.php [L]
+RewriteRule ^tsconfig\.json$ index.php [L]
+RewriteRule ^vite\.config\.js$ index.php [L]
+
 # make site links work
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
