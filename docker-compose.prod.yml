@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   kirby:
     container_name: storiedibit
