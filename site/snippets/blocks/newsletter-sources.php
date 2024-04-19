@@ -1,21 +1,12 @@
 <?php
 
 /** @var \Kirby\Cms\Block $block */
-/** @var string $lastSubsectionBlockId */
 
 $items = $block->sources()->toStructure();
 
 ?>
 
-<div class="flex gap-x-2.5 gap-y-2 flex-wrap mt-4 mb-5">
-    <a class="sources-pill"
-       data-like-block-id="<?= $lastSubsectionBlockId ?>">
-        <img src="<?= asset('assets/like.png')->url() ?>" alt="" class="w-4 h-4 rounded-sm">
-        <span>
-            Mi piace
-        </span>
-    </a>
-
+<div class="flex gap-x-2.5 gap-y-2 flex-wrap my-5">
     <?php foreach ($items as $item): ?>
         <?php
         $icon = urlToIconFileName($item->url());

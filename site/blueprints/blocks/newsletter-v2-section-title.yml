@@ -1,0 +1,8 @@
+name: "[v2] Section title"
+icon: title
+wysiwyg: true
+preview: text
+fields:
+  text:
+    label: 'Titolo blocco'
+    type: text

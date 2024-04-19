@@ -15,16 +15,26 @@
   src: url(fonts/RecoletaSemiBold.woff2) format('woff2');
 }
 
+/* TODO: get rid of Recoleta */
+
 /* TODO: embed Publico */
 
 @layer base {
   h1 {
     @apply font-title text-center text-5xl pt-20 pb-14;
+
+    &.v2 {
+      @apply font-sans text-left font-semibold;
+    }
   }
 
   h2 {
     @apply font-title font-semibold mt-16 mb-8 mx-auto text-center text-3xl;
-    line-height: 33px;
+    line-height: 1.1;
+
+    &.v2 {
+      @apply text-left my-5 font-sans;
+    }
   }
 
   h3 {
@@ -37,8 +47,8 @@
 
   p, ul, li {
     @apply my-2.5;
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 1.65;
   }
 
   p a, ul a {
@@ -58,7 +68,11 @@
   }
 
   hr {
-    @apply border-t border-gray-300;
+    @apply border-t border-gray-200;
+
+    &.v2 {
+      @apply border-t-2 border-gray-200;
+    }
   }
 
   figure {
@@ -88,7 +102,7 @@
     }
 
     .sources-pill {
-      @apply bg-sdb-gray-200 hover:bg-sdb-gray-300 transition-colors px-2.5 py-1 rounded-lg text-sm font-semibold flex items-center gap-1.5 cursor-pointer;
+      @apply bg-sdb-gray-200 hover:bg-sdb-gray-300 transition-colors px-2.5 py-1 rounded-md text-sm font-semibold flex items-center gap-1.5 cursor-pointer;
 
       &.selected {
         @apply bg-accent text-white;
@@ -98,9 +112,24 @@
         }
       }
     }
+  }
 
+  .newsletter.v1 {
     hr {
       margin: 40px 0;
+    }
+  }
+
+  .newsletter.v2 {
+    hr {
+      margin: 50px 0 25px 0;
+      @apply border-t-2 border-gray-200;
+    }
+
+    p, ul, li {
+      @apply my-2.5 font-serif;
+      font-size: 19px;
+      line-height: 1.5;
     }
   }
 

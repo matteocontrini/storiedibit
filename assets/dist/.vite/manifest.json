@@ -36,12 +36,12 @@
     "src": "src/fonts/RecoletaSemiBold.woff2"
   },
   "src/main.ts": {
-    "file": "main-DU6rH1xT.js",
+    "file": "main-BdYIY0fq.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
     "css": [
-      "main-BAskpaC4.css"
+      "main-C_KDLXIq.css"
     ],
     "assets": [
       "inter-cyrillic-ext-wght-normal-DIEz8p5i.woff2",
@@ -56,7 +56,7 @@
     ]
   },
   "src/panel.css": {
-    "file": "panel-Bp6xG8Sa.css",
+    "file": "panel-DsvtaY1t.css",
     "src": "src/panel.css",
     "isEntry": true
   }

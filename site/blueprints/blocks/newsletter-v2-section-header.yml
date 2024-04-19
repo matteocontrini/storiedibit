@@ -1,0 +1,8 @@
+name: "[v2] Section header"
+icon: title
+wysiwyg: true
+preview: text
+fields:
+  text:
+    label: 'Categoria del blocco'
+    type: text

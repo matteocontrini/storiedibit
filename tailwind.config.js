@@ -12,6 +12,7 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['"Inter Variable"', ...defaultTheme.fontFamily.sans],
+        'serif': ['Georgia', 'ui-serif', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
         'title': ['RecoletaMedium', '"Publico Text"', ...defaultTheme.fontFamily.serif],
         'blockquote': defaultTheme.fontFamily.serif,
         'article-headline': ['"Publico Headline"', ...defaultTheme.fontFamily.serif],

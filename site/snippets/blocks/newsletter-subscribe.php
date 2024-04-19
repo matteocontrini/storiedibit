@@ -7,12 +7,14 @@
         <input type="url" name="name" tabindex="-1">
     </div>
 
-    <div class="flex flex-col items-center gap-5 max-w-full">
-        <h2 class="text-white mt-0 mb-0 text-center">
+    <div class="flex flex-col items-start gap-5 max-w-full">
+        <!-- TODO: fix the default h2 -->
+        <h2 class="text-white mt-0 mb-0 text-left mx-0 font-sans">
             Iscriviti alla newsletter
         </h2>
 
-        <p class="mt-0 text-white text-center">
+        <!-- TODO: can we avoid forcing? -->
+        <p class="!my-0 text-white !text-lg">
             Non perderti le prossime uscite! Iscriviti alla newsletter per ricevere ogni weekend via email le storie più
             interessanti della settimana.
         </p>
@@ -21,7 +23,7 @@
             <input type="email" name="email" required placeholder="Il tuo indirizzo email..."
                    class="rounded-lg px-4 h-12 text-center w-full">
             <input type="submit" name="submit" value="Iscriviti"
-                   class="bg-white w-full sm:w-fit rounded-lg px-10 h-12 uppercase font-title text-accent cursor-pointer">
+                   class="bg-white w-full sm:w-fit rounded-lg px-10 h-12 uppercase font-semibold text-accent cursor-pointer">
         </div>
 
         <label for="privacy-<?= $block->id() ?>" class="text-fuchsia-200 self-start text-xs">

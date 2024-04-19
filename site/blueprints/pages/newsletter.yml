@@ -10,19 +10,21 @@ columns:
         type: blocks
         fieldsets:
           - text
-          - heading
           - image
+          - newsletter-v2-section-header
+          - newsletter-v2-section-title
+          - newsletter-sources
+          - newsletter-subscribe
           - quote
+          - list
+          - line
+          - newsletter-section
+          - newsletter-subsection
+          - heading
           - code
           - markdown
           - gallery
-          - line
           - video
-          - list
-          - newsletter-section
-          - newsletter-subsection
-          - newsletter-subscribe
-          - newsletter-sources
 
   sidebar:
     width: 1/3
