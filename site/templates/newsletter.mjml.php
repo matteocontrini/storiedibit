@@ -11,36 +11,22 @@ $kirby->user() && $kirby->user()->role()->isAdmin() || exit();
 
 $blocks = $page->text()->toBlocks();
 
-$fontsCss = $kirby->url('assets') . '/email/fonts.css';
 $logoUrl = $kirby->url('assets') . '/email/logo.png';
-
-function sdbColor(string $name): string
-{
-    $colors = [
-        'blue' => '#07397E',
-        'violet' => '#3c00bd',
-        'sky' => '#017fa7',
-        'red' => '#c00000',
-        'brown' => '#730347',
-        'teal' => '#006067',
-    ];
-    return $colors[$name];
-}
 
 // TODO: <mj-preview>?
 
 $mjml = '<mjml>
   <mj-head>
-    <mj-font name="RecoletaMedium" href="' . $fontsCss . '" />
-
     <mj-attributes>
-      <mj-divider border-color="#DDE3EE" border-width="1px" padding="0 16px" />
-      <mj-text font-family="Inter, Helvetica, Arial, sans-serif" font-size="17px" line-height="28px" padding="0 16px 10px 16px" />
+      <mj-divider border-color="#F0F2F5" border-width="2px" padding="0 16px" />
+      <mj-text font-family="Georgia, ui-serif, Cambria, \'Times New Roman\', Times, serif" font-size="19px" line-height="1.5" padding="0 16px 10px 16px" />
       <mj-image padding="10px 16px 20px 16px" border-radius="8px" />
-      <mj-class name="h2" font-family="RecoletaMedium, \'Publico Text\', Georgia, serif" font-size="30px" line-height="33px" align="center" font-weight="600" padding-top="60px" padding-bottom="30px" />
-      <mj-class name="h3" font-weight="600" font-size="18px" padding-top="30px" />
+      <mj-class name="h2" font-family="Inter, Helvetica, Arial, sans-serif" font-size="30px" line-height="1.1" font-weight="600" padding-top="0" padding-bottom="20px" />
+      <mj-class name="header" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14px" font-weight="700" letter-spacing="0.025em" padding="0 16px 16px 16px" />
+      <mj-class name="number" font-family="Inter, Helvetica, Arial, sans-serif" align="left" background-color="#A731D1" border-radius="40px"
+                width="40px" height="40px" padding="0px 16px 20px 16px" inner-padding="0" font-size="16px" font-weight="600" />
       <mj-social font-family="Inter, Helvetica, Arial, sans-serif" font-size="14px" line-height="28px" font-weight="600"
-                icon-size="16px" mode="horizontal" align="left" padding="5px 16px 10px 16px" inner-padding="0 0 0 8px" text-padding="0 8px 0 6px" css-class="sources" />
+                icon-size="16px" mode="horizontal" align="left" padding="10px 16px 10px 16px" inner-padding="0 0 0 8px" text-padding="0 8px 0 6px" css-class="sources" />
       <mj-social-element border-radius="2px" css-class="pill" />
     </mj-attributes>
     
@@ -71,16 +57,17 @@ $mjml = '<mjml>
     </mj-section>
 ';
 
-$lastSubsectionBlockId = null;
 $subscribeBlockCount = 0;
+$number = 0;
 
 $mjml .= '<mj-section><mj-column>';
 foreach ($blocks as $block) {
-    if ($block->type() === 'newsletter-section') {
-        $mjml .= '<mj-text mj-class="h2" color="' . sdbColor($block->color()) . '"><span id="' . $block->text()->slug() . '">' . $block->text()->smartypants() . '</span></mj-text>';
-    } else if ($block->type() === 'newsletter-subsection') {
-        $mjml .= '<mj-text mj-class="h3">• ' . $block->text()->smartypants() . '</mj-text>';
-        $lastSubsectionBlockId = $block->id();
+    if ($block->type() === 'newsletter-v2-section-header') {
+        $number++;
+        $mjml .= '<mj-text mj-class="header">' . $block->text()->upper()->smartypants() . '</mj-text>';
+        $mjml .= '<mj-button mj-class="number">' . $number . '</mj-button>';
+    } else if ($block->type() === 'newsletter-v2-section-title') {
+        $mjml .= '<mj-text mj-class="h2"><span id="' . $block->text()->slug() . '">' . $block->text()->smartypants() . '</span></mj-text>';
     } else if ($block->type() === 'text') {
         $text = $block->text()->smartypants();
         // Replace <p> with <mj-text>
@@ -113,10 +100,7 @@ foreach ($blocks as $block) {
           </mj-column>
         </mj-section><mj-section><mj-column>';
     } else if ($block->type() == 'newsletter-sources') {
-        $likeImage = $kirby->url('assets') . '/email/like.png'; // this is a route
-
         $mjml .= '<mj-social>';
-        $mjml .= '<mj-social-element src="' . $likeImage . '" href="' . $page->url() . '/like/' . $lastSubsectionBlockId . '">Mi piace</mj-social-element>';
         foreach ($block->sources()->toStructure() as $source) {
             $iconImage = $kirby->url('assets') . '/email/sources/' . urlToIconFileName($source->url()); // this is a route
             $mjml .= '<mj-social-element src="' . $iconImage . '" href="' . $source->url() . '">' . $source->name() . '</mj-social-element>';
@@ -124,13 +108,16 @@ foreach ($blocks as $block) {
         $mjml .= '</mj-social>';
     } else if ($block->type() == 'newsletter-subscribe') {
         if ($subscribeBlockCount === 0) {
-            $mjml .= '<mj-text padding="30px 16px 20px 16px" font-style="italic">
+            $mjml .= '<mj-text padding="30px 16px 10px 16px" font-style="italic">
                 Questa email è molto lunga e in base all’app che stai usando potrebbe essere tagliata verso la fine. Se preferisci, <a href="' . $page->url() . '" target="_blank">puoi leggerla online</a>.
-                <br><br>
+                </mj-text>
+                <mj-text padding="0 16px 20px 16px" font-style="italic">
                 Se ti piace, inoltrala a un amico o a un collega. Potrà iscriversi <a href="' . $kirby->url() . '" target="_blank">qua</a>.
             </mj-text>';
         }
         $subscribeBlockCount++;
+    } else if ($block->type() == 'line') {
+        $mjml .= '<mj-divider padding="20px 16px"></mj-divider>';
     }
 }
 
@@ -138,7 +125,7 @@ $mjml .= '
 <mj-divider padding="60px 16px"></mj-divider>
 
 <mj-text>
-Se questa newsletter ti è piacuta, inoltrala a un amico o a un collega. <a href="' . $kirby->url() . '" target="_blank">Ci si iscrive qua</a>.
+Se questa newsletter ti è piacuta, inoltrala a un amico o a un collega. <a href="' . $kirby->url() . '" target="_blank">Potrà iscriversi qua</a>.
 </mj-text>
 
 <mj-text>
