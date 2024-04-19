@@ -64,6 +64,7 @@ $mjml .= '<mj-section><mj-column>';
 foreach ($blocks as $block) {
     if ($block->type() === 'newsletter-v2-section-header') {
         $number++;
+        $mjml .= '<mj-divider padding="20px 16px"></mj-divider>';
         $mjml .= '<mj-text mj-class="header">' . $block->text()->upper()->smartypants() . '</mj-text>';
         $mjml .= '<mj-button mj-class="number">' . $number . '</mj-button>';
     } else if ($block->type() === 'newsletter-v2-section-title') {

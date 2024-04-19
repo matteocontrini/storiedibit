@@ -3,6 +3,8 @@
 /** @var int $number */
 ?>
 
+<hr>
+
 <span class="uppercase font-bold py-1 text-sm text-center tracking-wide">
     <?= $block->text() ?>
 </span>
