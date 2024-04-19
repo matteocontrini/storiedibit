@@ -31,3 +31,4 @@ columns:
         label: Published
         status: listed
         info: "#{{ page.num }}"
+        sortBy: num desc
