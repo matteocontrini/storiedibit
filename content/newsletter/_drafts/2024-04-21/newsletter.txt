@@ -2,7 +2,7 @@ Title: 2024-04-21
 
 ----
 
-Text: [{"content":{"text":"<p>Ciao! Questa settimana sperimentiamo un nuovo formato per questa newsletter: le dieci storie su Internet, AI, digitale più interessanti della settimana.</p>"},"id":"5a29be9c-be43-4a1a-8ffb-e78777bd26d8","isHidden":false,"type":"text"},{"content":[],"id":"bf533705-d383-4d46-8588-1d96ea440fd0","isHidden":false,"type":"line"},{"content":{"text":"A.I."},"id":"04b1c0b1-0d7a-4875-9145-2a617bc4ca0e","isHidden":false,"type":"newsletter-v2-section-header"},{"content":{"text":"Meta lancia Llama 3 e sfida ChatGPT con Meta AI"},"id":"76a4e01a-a138-4a98-be8e-bd8a3bd600a2","isHidden":false,"type":"newsletter-v2-section-title"},{"content":{"text":""},"id":"8b05b27c-055a-48c9-8e8e-605feee0d0bb","isHidden":false,"type":"text"}]
+Text: [{"content":{"text":"<p>Ciao! Questa settimana sperimentiamo un nuovo formato per questa newsletter: le dieci storie su Internet, AI, digitale più interessanti della settimana.</p>"},"id":"5a29be9c-be43-4a1a-8ffb-e78777bd26d8","isHidden":false,"type":"text"},{"content":[],"id":"ecf4f773-972c-4bac-9319-0d834f3283d5","isHidden":false,"type":"newsletter-subscribe"},{"content":[],"id":"bf533705-d383-4d46-8588-1d96ea440fd0","isHidden":false,"type":"line"},{"content":{"text":"A.I."},"id":"04b1c0b1-0d7a-4875-9145-2a617bc4ca0e","isHidden":false,"type":"newsletter-v2-section-header"},{"content":{"text":"Meta lancia Llama 3 e sfida ChatGPT con Meta AI"},"id":"76a4e01a-a138-4a98-be8e-bd8a3bd600a2","isHidden":false,"type":"newsletter-v2-section-title"},{"content":{"text":""},"id":"8b05b27c-055a-48c9-8e8e-605feee0d0bb","isHidden":false,"type":"text"}]
 
 ----
 
