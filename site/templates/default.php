@@ -10,7 +10,7 @@ slot();
 ?>
 
 <main class="container">
-    <h1>
+    <h1 class="v2">
         <?= $page->title() ?>
     </h1>
 

@@ -1,15 +1,3 @@
-@font-face {
-  font-family: RecoletaMedium;
-  font-display: swap;
-  src: url(fonts/RecoletaMedium.woff2) format("woff2")
-}
-
-@font-face {
-  font-family: RecoletaSemiBold;
-  font-display: swap;
-  src: url(fonts/RecoletaSemiBold.woff2) format("woff2")
-}
-
 /* Text/list block */
 .k-block-type-text p, .k-block-type-list-input p {
   font-family: Georgia, serif;

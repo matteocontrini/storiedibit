@@ -27,21 +27,13 @@
     "file": "inter-vietnamese-wght-normal-_GQuwPVU.woff2",
     "src": "../node_modules/@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2"
   },
-  "src/fonts/RecoletaMedium.woff2": {
-    "file": "RecoletaMedium-lmBN2g00.woff2",
-    "src": "src/fonts/RecoletaMedium.woff2"
-  },
-  "src/fonts/RecoletaSemiBold.woff2": {
-    "file": "RecoletaSemiBold-1kTMgrn3.woff2",
-    "src": "src/fonts/RecoletaSemiBold.woff2"
-  },
   "src/main.ts": {
-    "file": "main-Dz0Z-i-w.js",
+    "file": "main-Dc66eOJC.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
     "css": [
-      "main-Db_KE5P4.css"
+      "main-DAdFda6E.css"
     ],
     "assets": [
       "inter-cyrillic-ext-wght-normal-DIEz8p5i.woff2",
@@ -50,13 +42,11 @@
       "inter-greek-wght-normal-DyIDNIyN.woff2",
       "inter-vietnamese-wght-normal-_GQuwPVU.woff2",
       "inter-latin-ext-wght-normal-CN1pIXkb.woff2",
-      "inter-latin-wght-normal-BgVq2Tq4.woff2",
-      "RecoletaMedium-lmBN2g00.woff2",
-      "RecoletaSemiBold-1kTMgrn3.woff2"
+      "inter-latin-wght-normal-BgVq2Tq4.woff2"
     ]
   },
   "src/panel.css": {
-    "file": "panel-DsvtaY1t.css",
+    "file": "panel-D1HZc7ad.css",
     "src": "src/panel.css",
     "isEntry": true
   }

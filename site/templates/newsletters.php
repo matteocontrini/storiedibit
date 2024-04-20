@@ -10,7 +10,7 @@ slot();
 ?>
 
 <main class="container">
-    <h1>
+    <h1 class="v2">
         Archivio newsletter
     </h1>
 
@@ -18,9 +18,9 @@ slot();
 
     <?php foreach (page('newsletter')->children()->listed()->sortBy('num', 'desc') as $newsletter): ?>
         <article>
-            <h2>
+            <h2 class="v2 !mt-16 !mb-8">
                 <a href="<?= $newsletter->url() ?>" class="underline">
-                    <?= $newsletter->title() ?>
+                    <?= $newsletter->title()->toDate('d MMMM y') ?>
                 </a>
             </h2>
 
@@ -35,10 +35,6 @@ slot();
                 echo $text;
                 ?>
             </div>
-
-            <a href="<?= $newsletter->url() ?>" class="underline">
-                Leggi tutto
-            </a>
         </article>
     <?php endforeach; ?>
 </main>

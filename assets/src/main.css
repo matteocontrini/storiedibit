@@ -2,26 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: RecoletaMedium;
-  font-display: swap;
-  font-weight: 600;
-  src: url(fonts/RecoletaMedium.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: RecoletaSemiBold;
-  font-display: swap;
-  src: url(fonts/RecoletaSemiBold.woff2) format('woff2');
-}
-
-/* TODO: get rid of Recoleta */
-
 /* TODO: embed Publico */
 
 @layer base {
   h1 {
-    @apply font-title text-center text-5xl pt-20 pb-14;
+    @apply text-center text-5xl pt-20 pb-14;
 
     &.v2 {
       @apply font-sans text-left font-semibold;
@@ -29,11 +14,11 @@
   }
 
   h2 {
-    @apply font-title font-semibold mt-16 mb-8 mx-auto text-center text-3xl;
+    @apply font-semibold mt-16 mb-8 mx-auto text-center text-3xl;
     line-height: 1.1;
 
     &.v2 {
-      @apply text-left my-5 font-sans;
+      @apply text-left my-5;
     }
   }
 
@@ -52,7 +37,7 @@
   }
 
   p a, ul a {
-    @apply underline text-accent;
+    @apply underline;
   }
 
   ul {
@@ -111,6 +96,10 @@
           filter: invert(1);
         }
       }
+    }
+
+    p a, ul a {
+      @apply text-accent;
     }
   }
 
