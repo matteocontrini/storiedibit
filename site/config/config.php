@@ -50,44 +50,6 @@ $config = [
                 return false;
             }
         ],
-        // Newsletter like
-        [
-            'pattern' => 'newsletter/(:any)/like/(:any)',
-            'method' => 'GET|POST',
-            'action' => function ($id, $blockUuid) {
-                $page = page('newsletter')->findPageOrDraft($id);
-
-                if (!$page) {
-                    return false;
-                }
-
-                $block = $page->text()->toBlocks()->find($blockUuid);
-
-                if (!$block || $block->type() !== 'newsletter-subsection') {
-                    return false;
-                }
-
-                if (kirby()->request()->is('POST')) {
-                    // Append a line with block uuid and current date
-                    $statsPath = $page->root() . '/likes.csv';
-
-                    $date = new DateTime();
-                    $date->setTimezone(new DateTimeZone('Europe/Rome'));
-                    $ts = $date->format(DateTimeInterface::ATOM);
-
-                    file_put_contents($statsPath, $blockUuid . ',' . $ts . PHP_EOL, FILE_APPEND | LOCK_EX);
-
-                    return [
-                        'status' => 'ok'
-                    ];
-                } else {
-                    return page('like')->render([
-                        'pageId' => $id,
-                        'blockId' => $blockUuid
-                    ]);
-                }
-            }
-        ],
         // Newsletter images
         [
             'pattern' => 'newsletter/(:any)/image/(:any)/(:alpha)',
