@@ -26,8 +26,9 @@ slot();
             <input type="url" id="name" name="name" tabindex="-1">
         </div>
 
-        <div class="flex flex-col items-center gap-5 max-w-full">
-            <h2 class="text-white mt-0 mb-4 text-center">
+        <div class="flex flex-col gap-5 max-w-full">
+            <!-- TODO: fix the default h2 -->
+            <h2 class="text-white mt-0 mb-4 font-sans mx-0">
                 Iscriviti alla newsletter
             </h2>
 
@@ -35,7 +36,7 @@ slot();
                 <input type="email" id="email" name="email" required placeholder="Il tuo indirizzo email..."
                        class="rounded-lg px-4 h-12 text-center w-full">
                 <input type="submit" name="submit" value="Iscriviti"
-                       class="bg-white w-full sm:w-fit rounded-lg px-10 h-12 uppercase font-title text-accent cursor-pointer">
+                       class="bg-white w-full sm:w-fit rounded-lg px-10 h-12 uppercase font-semibold text-accent cursor-pointer">
             </div>
 
             <label for="privacy" class="text-fuchsia-200 self-start text-xs">
@@ -49,9 +50,12 @@ slot();
         </div>
     </form>
 
-    <a class="mt-16 block text-lg text-center underline" href="<?= page('newsletter')->url() ?>">
-        Vai all'archivio
-    </a>
+    <div class="mt-16 text-center">
+        →
+        <a class="text-lg underline" href="<?= page('newsletter')->url() ?>">
+            Vai all'archivio
+        </a>
+    </div>
 </main>
 
 <?php endslot() ?>

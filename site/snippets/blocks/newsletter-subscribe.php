@@ -7,7 +7,7 @@
         <input type="url" name="name" tabindex="-1">
     </div>
 
-    <div class="flex flex-col items-start gap-5 max-w-full">
+    <div class="flex flex-col gap-5 max-w-full">
         <!-- TODO: fix the default h2 -->
         <h2 class="text-white mt-0 mb-0 text-left mx-0 font-sans">
             Iscriviti alla newsletter
