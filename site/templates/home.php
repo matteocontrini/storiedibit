@@ -11,8 +11,7 @@ slot();
 
 <main class="container mt-20">
     <p class="text-center">
-        <strong>Storie di bit</strong> è una newsletter settimanale su Internet, intelligenza artificiale, reti,
-        telecomunicazioni, digitale e cybersecurity.
+        <strong>Storie di bit</strong> è una newsletter settimanale su Internet, AI e digitale.
     </p>
 
     <p class="text-center">

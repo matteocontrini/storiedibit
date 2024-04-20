@@ -22,7 +22,7 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="Storie di bit">
         <meta property="og:description"
-              content="Una newsletter settimanale su Internet, intelligenza artificiale, reti, telecomunicazioni, digitale e cybersecurity.">
+              content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
         <meta property="og:image" content="<?= assetV('assets/opengraph.png') ?>">
     <?php endif ?>
 
