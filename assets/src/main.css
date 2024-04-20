@@ -81,10 +81,6 @@
         }
       }
     }
-
-    p a, ul a {
-      @apply text-accent;
-    }
   }
 
   .newsletter.v1 {
@@ -107,6 +103,10 @@
       @apply my-2.5 font-serif;
       font-size: 19px;
       line-height: 1.5;
+
+      a {
+        @apply text-accent;
+      }
     }
 
     h2 {

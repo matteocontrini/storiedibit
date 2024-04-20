@@ -28,12 +28,12 @@
     "src": "../node_modules/@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2"
   },
   "src/main.ts": {
-    "file": "main-BT23SqE-.js",
+    "file": "main-ByQlkvDg.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
     "css": [
-      "main-CTwPFjZ9.css"
+      "main-BM9m0-md.css"
     ],
     "assets": [
       "inter-cyrillic-ext-wght-normal-DIEz8p5i.woff2",
