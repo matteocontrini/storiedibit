@@ -8,8 +8,7 @@
     </div>
 
     <div class="flex flex-col gap-5 max-w-full">
-        <!-- TODO: fix the default h2 -->
-        <h2 class="text-white mt-0 mb-0 text-left mx-0 font-sans">
+        <h2 class="text-white my-0">
             Iscriviti alla newsletter
         </h2>
 

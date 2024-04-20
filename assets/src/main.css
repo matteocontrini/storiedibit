@@ -6,24 +6,12 @@
 
 @layer base {
   h1 {
-    @apply text-center text-5xl pt-20 pb-14;
-
-    &.v2 {
-      @apply font-sans text-left font-semibold;
-    }
+    @apply text-5xl pt-20 pb-14 font-semibold;
   }
 
   h2 {
-    @apply font-semibold mt-16 mb-8 mx-auto text-center text-3xl;
+    @apply font-semibold mt-16 mb-8 text-3xl;
     line-height: 1.1;
-
-    &.v2 {
-      @apply text-left my-5;
-    }
-  }
-
-  h3 {
-    @apply mt-10 font-semibold text-lg;
   }
 
   b, strong {
@@ -53,11 +41,7 @@
   }
 
   hr {
-    @apply border-t border-gray-200;
-
-    &.v2 {
-      @apply border-t-2 border-gray-200;
-    }
+    @apply border-t-2 border-gray-200;
   }
 
   figure {
@@ -107,6 +91,10 @@
     hr {
       margin: 40px 0;
     }
+
+    h3 {
+      @apply mt-10 font-semibold text-lg;
+    }
   }
 
   .newsletter.v2 {
@@ -119,6 +107,10 @@
       @apply my-2.5 font-serif;
       font-size: 19px;
       line-height: 1.5;
+    }
+
+    h2 {
+      @apply my-5;
     }
   }
 

@@ -27,8 +27,7 @@ slot();
         </div>
 
         <div class="flex flex-col gap-5 max-w-full">
-            <!-- TODO: fix the default h2 -->
-            <h2 class="text-white mt-0 mb-4 font-sans mx-0">
+            <h2 class="text-white mt-0 mb-4">
                 Iscriviti alla newsletter
             </h2>
 

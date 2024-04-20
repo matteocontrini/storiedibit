@@ -16,7 +16,7 @@ slot();
             Pagina non trovata
         </h1>
 
-        <p class="text-center">
+        <p>
             Hmm, questa pagina non sembra esistere...
         </p>
     <?php else: ?>
@@ -24,11 +24,11 @@ slot();
             Errore
         </h1>
 
-        <p class="text-center">
+        <p>
             Si è verificato un errore.
         </p>
 
-        <p class="text-center">
+        <p>
             Se il problema persiste, contattaci.
         </p>
     <?php endif; ?>

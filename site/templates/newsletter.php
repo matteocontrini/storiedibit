@@ -12,7 +12,7 @@ $isv2 = $page->title()->toDate() > 1713511388;
 ?>
 
 <main class="container">
-    <h1 class="pb-0 v2">
+    <h1 class="pb-0">
         Le storie della settimana
     </h1>
 
@@ -20,7 +20,7 @@ $isv2 = $page->title()->toDate() > 1713511388;
         <?= $page->title()->toDate('d MMMM y') ?>
     </div>
 
-    <hr class="my-12 v2">
+    <hr class="my-12">
 
     <?php if ($isv2) : ?>
         <div class="newsletter v2">
