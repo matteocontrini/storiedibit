@@ -57,11 +57,15 @@ $mjml = '<mjml>
     </mj-section>
 ';
 
-$subscribeBlockCount = 0;
 $number = 0;
+$skipNext = false;
 
 $mjml .= '<mj-section><mj-column>';
 foreach ($blocks as $block) {
+    if ($skipNext) {
+        $skipNext = false;
+        continue;
+    }
     if ($block->type() === 'newsletter-v2-section-header') {
         $number++;
         $mjml .= '<mj-divider padding="20px 16px"></mj-divider>';
@@ -107,36 +111,14 @@ foreach ($blocks as $block) {
             $mjml .= '<mj-social-element src="' . $iconImage . '" href="' . $source->url() . '">' . $source->name() . '</mj-social-element>';
         }
         $mjml .= '</mj-social>';
-    } else if ($block->type() == 'newsletter-subscribe') {
-        if ($subscribeBlockCount === 0) {
-            $mjml .= '<mj-text padding="30px 16px 10px 16px" font-style="italic">
-                Questa email è molto lunga e in base all’app che stai usando potrebbe essere tagliata verso la fine. Se preferisci, <a href="' . $page->url() . '" target="_blank">puoi leggerla online</a>.
-                </mj-text>
-                <mj-text padding="0 16px 20px 16px" font-style="italic">
-                Se ti piace, inoltrala a un amico o a un collega. Potrà iscriversi <a href="' . $kirby->url() . '" target="_blank">qua</a>.
-            </mj-text>';
-        }
-        $subscribeBlockCount++;
     } else if ($block->type() == 'line') {
         $mjml .= '<mj-divider padding="20px 16px"></mj-divider>';
+    } else if ($block->type() === 'newsletter-only-archive') {
+        $skipNext = true;
     }
 }
 
 $mjml .= '
-<mj-divider padding="60px 16px"></mj-divider>
-
-<mj-text>
-Se questa newsletter ti è piacuta, inoltrala a un amico o a un collega. <a href="' . $kirby->url() . '" target="_blank">Potrà iscriversi qua</a>.
-</mj-text>
-
-<mj-text>
-Se vuoi dirmi qualcosa, rispondi pure a questa email!
-</mj-text>
-
-<mj-text>
-Ciao,<br>Matteo
-</mj-text>
-
 <mj-divider padding="40px 16px 60px 16px"></mj-divider>
 
 <mj-text font-size="14px" color="#5A6B88" align="center">

@@ -26,10 +26,17 @@ $isv2 = $page->title()->toDate() > 1713511388;
         <div class="newsletter v2">
             <?php
             $n = 0;
+            $skipNext = false;
             foreach ($page->text()->toBlocks() as $block) {
+                if ($skipNext) {
+                    $skipNext = false;
+                    continue;
+                }
                 if ($block->type() === 'newsletter-v2-section-header') {
                     $n++;
                     echo snippet('blocks/newsletter-v2-section-header', ['block' => $block, 'number' => $n]);
+                } else if ($block->type() === 'newsletter-only-email') {
+                    $skipNext = true;
                 } else {
                     echo smartypants($block);
                 }
