@@ -52,7 +52,7 @@
   }
 
   p a, ul a {
-    @apply underline;
+    @apply underline text-accent;
   }
 
   ul {
