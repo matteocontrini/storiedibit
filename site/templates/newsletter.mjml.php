@@ -26,13 +26,13 @@ $mjml = '<mjml>
       <mj-class name="number" font-family="Inter, Helvetica, Arial, sans-serif" align="left" background-color="#A731D1" border-radius="40px"
                 width="40px" height="40px" padding="0px 16px 20px 16px" inner-padding="0" font-size="16px" font-weight="600" />
       <mj-social font-family="Inter, Helvetica, Arial, sans-serif" font-size="14px" line-height="28px" font-weight="600"
-                icon-size="16px" mode="horizontal" align="left" padding="10px 16px 10px 16px" inner-padding="0 0 0 8px" text-padding="0 8px 0 6px" css-class="sources" />
+                icon-size="16px" mode="horizontal" align="left" padding="10px 16px 0 16px" inner-padding="0 0 0 8px" text-padding="0 8px 0 6px" css-class="sources" />
       <mj-social-element border-radius="2px" css-class="pill" />
     </mj-attributes>
     
     <mj-style inline="inline">
       a {
-        color: #000000;
+        color: #A731D1;
         text-decoration: underline;
       }
       b, strong {
@@ -48,9 +48,9 @@ $mjml = '<mjml>
   </mj-head>
   
   <mj-body width="640px">
-    <mj-section>
+    <mj-section padding="0">
       <mj-column>
-        <mj-image width="200px" src="' . $logoUrl . '" padding-top="35px"></mj-image>
+        <mj-image width="200px" src="' . $logoUrl . '" padding-top="55px"></mj-image>
 
         <mj-divider padding="40px 16px 20px 16px"></mj-divider>
       </mj-column>
@@ -68,7 +68,7 @@ foreach ($blocks as $block) {
     }
     if ($block->type() === 'newsletter-v2-section-header') {
         $number++;
-        $mjml .= '<mj-divider padding="20px 16px"></mj-divider>';
+        $mjml .= '<mj-divider padding="40px 16px 20px 16px"></mj-divider>';
         $mjml .= '<mj-text mj-class="header">' . $block->text()->upper()->smartypants() . '</mj-text>';
         $mjml .= '<mj-button mj-class="number">' . $number . '</mj-button>';
     } else if ($block->type() === 'newsletter-v2-section-title') {
@@ -112,7 +112,7 @@ foreach ($blocks as $block) {
         }
         $mjml .= '</mj-social>';
     } else if ($block->type() == 'line') {
-        $mjml .= '<mj-divider padding="20px 16px"></mj-divider>';
+        $mjml .= '<mj-divider padding="40px 16px"></mj-divider>';
     } else if ($block->type() === 'newsletter-only-archive') {
         $skipNext = true;
     }
