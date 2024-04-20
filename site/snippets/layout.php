@@ -17,14 +17,17 @@
     <?= vite()->css('src/main.ts') ?>
 
     <?php if ($page->isHomePage()): ?>
+        <meta property="twitter:card" content="summary_large_image">
         <meta property="og:site_name" content="Storie di bit">
-        <meta property="og:url" content="https://storiedibit.it">
+        <meta property="og:url" content="<?= $site->url() ?>">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Storie di bit">
         <meta property="og:description"
               content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
         <meta property="og:image" content="<?= assetV('assets/opengraph.png') ?>">
     <?php endif ?>
+
+    <link rel="canonical" href="<?= $page->url() ?>">
 
     <link rel="icon" href="<?= assetV('assets/favicon-32.png') ?>" type="image/png" sizes="32x32"/>
     <meta property="og:logo" content="<?= assetV('assets/favicon-500.png') ?>"/>
