@@ -27,7 +27,7 @@ slot();
         </div>
 
         <div class="flex flex-col gap-5 max-w-full">
-            <h2 class="text-white mt-0 mb-4">
+            <h2 class="text-white mt-0 mb-4 text-center">
                 Iscriviti alla newsletter
             </h2>
 

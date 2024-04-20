@@ -8,7 +8,7 @@
     </div>
 
     <div class="flex flex-col gap-5 max-w-full">
-        <h2 class="text-white my-0">
+        <h2 class="text-white !my-0">
             Iscriviti alla newsletter
         </h2>
 
