@@ -25,10 +25,15 @@ function urlToIconFileName(string $url)
         'medium.com' => 'medium.png',
         'arstechnica.com' => 'arstechnica.png',
         'ilsole24ore.com' => 'ilsole24ore.png',
+        'infodata.ilsole24ore.com' => 'ilsole24ore.png',
         'openai.com' => 'openai.png',
         'blog.cloudflare.com' => 'cloudflare.png',
         'nytimes.com' => 'nytimes.png',
         'wsj.com' => 'wsj.png',
+        'ai.meta.com' => 'meta.png',
+        'about.fb.com' => 'meta.png',
+        'mistral.ai' => 'mistral.png',
+        'hdblog.it' => 'hdblog.png',
         default => 'generic.png',
     };
 }
