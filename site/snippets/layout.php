@@ -23,7 +23,8 @@
     <meta property="og:title" content="<?= isset($title) ? $title . ' | ' : '' ?><?= $site->title() ?>">
     <meta property="og:description"
           content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
-    <meta property="og:image" content="<?= assetV('assets/opengraph.png') ?>">
+    <meta property="og:image"
+          content="<?= $page->template()->name() === 'newsletter' ? $page->url() . '.png' : assetV('assets/opengraph.png') ?>">
     <meta property="twitter:card" content="summary_large_image">
 
     <link rel="canonical" href="<?= $page->url() ?>">
