@@ -3,7 +3,9 @@
 /** @var Kirby\Cms\Page $page */
 /** @var Kirby\Cms\Site $site */
 
-snippet('layout', slots: true);
+$title = 'Archivio newsletter';
+
+snippet('layout', ['title' => $title], slots: true);
 
 slot();
 

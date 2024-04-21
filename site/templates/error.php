@@ -4,7 +4,7 @@
 
 $code = $kirby->response()->code();
 
-snippet('layout', slots: true);
+snippet('layout', ['title' => 'Errore'], slots: true);
 
 slot();
 

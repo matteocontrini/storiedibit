@@ -3,7 +3,7 @@
 /** @var Kirby\Cms\Page $page */
 /** @var Kirby\Cms\Site $site */
 
-snippet('layout', slots: true);
+snippet('layout', ['title' => $page->title()], slots: true);
 
 slot();
 

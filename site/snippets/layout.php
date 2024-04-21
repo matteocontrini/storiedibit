@@ -3,6 +3,7 @@
  * @var Kirby\Cms\Page $page
  * @var Kirby\Cms\Site $site
  * @var string $slot
+ * @var string $title
  */
 ?>
 <!DOCTYPE html>
@@ -11,21 +12,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
 
-    <title><?= $site->title() ?></title>
+    <title><?= isset($title) ? $title . ' | ' : '' ?><?= $site->title() ?></title>
 
     <?= vite()->js('src/main.ts') ?>
     <?= vite()->css('src/main.ts') ?>
 
-    <?php if ($page->isHomePage()): ?>
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="og:site_name" content="Storie di bit">
-        <meta property="og:url" content="<?= $site->url() ?>">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Storie di bit">
-        <meta property="og:description"
-              content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
-        <meta property="og:image" content="<?= assetV('assets/opengraph.png') ?>">
-    <?php endif ?>
+    <meta property="og:site_name" content="Storie di bit">
+    <meta property="og:url" content="<?= $page->url() ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?= isset($title) ? $title . ' | ' : '' ?><?= $site->title() ?>">
+    <meta property="og:description"
+          content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
+    <meta property="og:image" content="<?= assetV('assets/opengraph.png') ?>">
+    <meta property="twitter:card" content="summary_large_image">
 
     <link rel="canonical" href="<?= $page->url() ?>">
 

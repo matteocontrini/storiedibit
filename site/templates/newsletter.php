@@ -3,11 +3,12 @@
 /** @var Kirby\Cms\Page $page */
 /** @var Kirby\Cms\Site $site */
 
-snippet('layout', slots: true);
+$isv2 = $page->title()->toDate() > 1713511388;
+$title = 'Newsletter ' . $page->title()->toDate('d MMMM y');
+
+snippet('layout', ['title' => $title], slots: true);
 
 slot();
-
-$isv2 = $page->title()->toDate() > 1713511388;
 
 ?>
 
