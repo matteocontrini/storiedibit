@@ -21,7 +21,7 @@ $mjml = '<mjml>
       <mj-divider border-color="#F0F2F5" border-width="2px" padding="0 16px" />
       <mj-text font-family="Georgia, ui-serif, Cambria, \'Times New Roman\', Times, serif" font-size="19px" line-height="1.5" padding="0 16px 10px 16px" />
       <mj-image padding="10px 16px 20px 16px" border-radius="8px" />
-      <mj-class name="h2" font-family="Inter, Helvetica, Arial, sans-serif" font-size="30px" line-height="1.1" font-weight="600" padding-top="0" padding-bottom="20px" />
+      <mj-class name="h2" font-family="Inter, Helvetica, Arial, sans-serif" font-size="30px" line-height="1.2" font-weight="600" padding-top="0" padding-bottom="20px" />
       <mj-class name="header" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14px" font-weight="700" letter-spacing="0.025em" padding="0 16px 16px 16px" />
       <mj-class name="number" font-family="Inter, Helvetica, Arial, sans-serif" align="left" background-color="#A731D1" border-radius="40px"
                 width="40px" height="40px" padding="0px 16px 20px 16px" inner-padding="0" font-size="16px" font-weight="600" />

@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* TODO: embed Publico */
-
 @layer base {
   h1 {
     @apply text-5xl pt-20 pb-14 font-semibold;
@@ -11,7 +9,7 @@
 
   h2 {
     @apply font-semibold mt-16 mb-8 text-3xl;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   b, strong {
