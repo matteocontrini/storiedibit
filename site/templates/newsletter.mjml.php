@@ -95,7 +95,7 @@ foreach ($blocks as $block) {
     } else if ($block->type() === 'quote') {
         $mjml .= '</mj-column></mj-section><mj-section padding="0 16px 10px 16px">
           <mj-column background-color="#f5f5f5" padding="20px">
-            <mj-text font-family="Georgia, serif" align="center" font-size="24px" line-height="32px">
+            <mj-text align="center" font-size="24px" line-height="32px">
               ' . $block->text()->smartypants() . '
             </mj-text>
     
@@ -115,6 +115,15 @@ foreach ($blocks as $block) {
         $mjml .= '<mj-divider padding="40px 16px"></mj-divider>';
     } else if ($block->type() === 'newsletter-only-archive') {
         $skipNext = true;
+    }
+    else if ($block->type() === 'newsletter-subscribe') {
+        $mjml .= '</mj-column></mj-section><mj-section padding="0 16px 0 16px">
+          <mj-column background-color="#A731D1" padding="20px" border-radius="8px">
+            <mj-text color="#fff" align="center" padding="0">
+              Se questa newsletter ti piace, inoltrala a un amico o a un collega, <a href="https://storiedibit.it/?ref=email" target="_blank" style="color: #fff">potrà iscriversi qua</a>. Grazie!
+            </mj-text>
+          </mj-column>
+        </mj-section><mj-section padding="0 0 20px 0"><mj-column>';
     }
 }
 
