@@ -4,7 +4,7 @@
 /** @var Kirby\Cms\Site $site */
 
 $isv2 = $page->title()->toDate() > 1713511388;
-$title = 'Newsletter ' . $page->title()->toDate('d MMMM y');
+$title = $page->title()->toDate('d MMMM y');
 
 snippet('layout', ['title' => $title], slots: true);
 
