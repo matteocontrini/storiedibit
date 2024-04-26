@@ -140,7 +140,7 @@ Inviata con <a href="{{RewardsURL}}">EmailOctopus</a>
 </mj-body>
 </mjml>';
 
-$command = 'echo ' . escapeshellarg($mjml) . ' | mjml -i';
+$command = 'echo ' . escapeshellarg($mjml) . ' | mjml -i --config.minify';
 
 $output = shell_exec($command);
 
