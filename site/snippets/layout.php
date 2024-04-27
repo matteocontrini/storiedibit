@@ -2,6 +2,7 @@
 /**
  * @var Kirby\Cms\Page $page
  * @var Kirby\Cms\Site $site
+ * @var Kirby\Cms\App $kirby
  * @var string $slot
  * @var string $title
  */
@@ -64,12 +65,10 @@
     </p>
 </footer>
 
-<script>
-    if (window.location.host !== 'storiedibit.it') {
-        window.goatcounter = {no_onload: true};
-    }
-</script>
-<script data-goatcounter="https://storiedibit.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<?php if (!$kirby->system()->isLocal()): ?>
+    <script data-goatcounter="https://storiedibit.goatcounter.com/count" async
+            src="https://gc.zgo.at/count.js"></script>
+<?php endif; ?>
 
 </body>
 </html>
