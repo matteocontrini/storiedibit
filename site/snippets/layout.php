@@ -6,6 +6,15 @@
  * @var string $slot
  * @var string $title
  */
+
+if ($page->isHomePage()) {
+    $title = 'Storie di bit, una newsletter su Internet, AI, digitale';
+} else if (isset($title)) {
+    $title .= ' | ' . $site->title();
+} else {
+    $title = $site->title();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="it" class="motion-safe:scroll-smooth">
@@ -13,7 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
 
-    <title><?= isset($title) ? $title . ' | ' : '' ?><?= $site->title() ?></title>
+    <title><?= $title ?></title>
 
     <?= vite()->js('src/main.ts') ?>
     <?= vite()->css('src/main.ts') ?>
@@ -21,7 +30,7 @@
     <meta property="og:site_name" content="Storie di bit">
     <meta property="og:url" content="<?= $page->url() ?>">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="<?= isset($title) ? $title . ' | ' : '' ?><?= $site->title() ?>">
+    <meta property="og:title" content="<?= $title ?>">
     <meta property="og:description"
           content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
     <meta property="og:image"
