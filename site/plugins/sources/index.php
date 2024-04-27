@@ -34,6 +34,11 @@ function urlToIconFileName(string $url)
         'about.fb.com' => 'meta.png',
         'mistral.ai' => 'mistral.png',
         'hdblog.it' => 'hdblog.png',
+        'ansa.it' => 'ansa.png',
+        'news.microsoft.com' => 'microsoft.png',
+        'mondomobileweb.it' => 'mondomobileweb.png',
+        'hwupgrade.it' => 'hwupgrade.png',
+        'ec.europa.eu' => 'europa.png',
         default => 'generic.png',
     };
 }
