@@ -34,7 +34,7 @@ if ($page->isHomePage()) {
     <meta property="og:description"
           content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
     <meta property="og:image"
-          content="<?= $page->template()->name() === 'newsletter' ? $page->url() . '.png' : assetV('assets/opengraph.png') ?>">
+          content="<?= $page->template()->name() === 'newsletter' || $page->template()->name() === 'newsletter-section' ? $page->url() . '.png' : assetV('assets/opengraph.png') ?>">
     <meta property="twitter:card" content="summary_large_image">
 
     <link rel="canonical" href="<?= $page->url() ?>">
