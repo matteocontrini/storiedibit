@@ -25,6 +25,20 @@ slot();
         ?>
     </div>
 
+    <hr class="my-10">
+
+    <p class="font-semibold">Dalla stessa newsletter puoi leggere anche:</p>
+
+    <ul>
+        <?php foreach ($page->parent()->children() as $section): ?>
+            <?php if ($section->slug() != $page->slug()) : ?>
+                <li>
+                    <a href="<?= $section->url() ?>"><?= $section->title() ?></a>
+                </li>
+            <?php endif ?>
+        <?php endforeach ?>
+    </ul>
+
 </main>
 
 <?php endslot() ?>
