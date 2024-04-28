@@ -9,10 +9,15 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\.storiedibit\.it [NC]
 RewriteRule ^(.*)$ https://storiedibit.it/$1 [L,R=301]
 
-# pass requests not referring to files that should be served from the filesystem to index.php
+# except for static folders, everything should be served by Kirby (producing 404 for forbidden files)
 RewriteCond %{REQUEST_URI} !^/media/
 RewriteCond %{REQUEST_URI} !^/assets/(?!src)
 RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteRule ^(.*) index.php [L]
+
+# we get here only for static files
+# if the requested static file doesn't exist, let Kirby generate it or return 404
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*) index.php [L]
 
 </IfModule>
