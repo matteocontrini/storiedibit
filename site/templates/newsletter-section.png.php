@@ -25,7 +25,7 @@ $text = $page->date()->toDate('d MMMM y') . '  •  ' . strtoupper($blocks->firs
 imagefttext($canvas, 17, 0, 150, 150, $textColor, $fontFile, $text);
 
 // Write page title to canvas
-$text = wordwrap($page->title(), 40);
+$text = wordwrap($page->title(), 35);
 $coords = imagefttext($canvas, 40, 0, 150, 215, $textColor, $fontFile, $text, ['linespacing' => 0.9]);
 
 // Place logo in the corner
