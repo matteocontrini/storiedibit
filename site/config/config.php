@@ -6,6 +6,10 @@ use Kirby\Cms\Page;
 $config = [
     'debug' => false,
     'ready' => function (Kirby\Cms\App $kirby) {
+        if (!vite()->isDev()) {
+            header('Content-Security-Policy-Report-Only: default-src \'none\'; script-src-elem \'self\' gc.zgo.at; style-src-elem \'self\'; connect-src https://storiedibit.goatcounter.com/count; font-src \'self\'; img-src \'self\'; report-uri https://18375b7a0330ab8c626c8938b621ba46.report-uri.com/r/d/csp/reportOnly');
+        }
+
         return [
             'debug' => $kirby->user() && $kirby->user()->role()->isAdmin(),
             'panel' => [
