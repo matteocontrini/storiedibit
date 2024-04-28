@@ -22,37 +22,4 @@ class NewsletterPage extends Page
         return $bytes;
     }
 
-    public function likesReports()
-    {
-        $statsPath = $this->root() . '/likes.csv';
-
-        if (!file_exists($statsPath)) {
-            return [];
-        }
-
-        $blocks = $this->text()->toBlocks();
-
-        $file = fopen($statsPath, 'r');
-
-        $counts = [];
-
-        while (($line = fgetcsv($file)) !== FALSE) {
-            if (isset($counts[$line[0]])) {
-                $counts[$line[0]]++;
-            } else {
-                $counts[$line[0]] = 1;
-            }
-        }
-
-        fclose($file);
-
-        $result = [];
-        foreach ($counts as $id => $value) {
-            $label = $blocks->find($id)->text();
-            $result[] = ['label' => $label, 'value' => $value];
-        }
-
-        return $result;
-    }
-
 }
