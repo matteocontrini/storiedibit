@@ -1,49 +1,18 @@
 # Kirby .htaccess
-# revision 2023-07-22
 
 # rewrite rules
 <IfModule mod_rewrite.c>
 
-# enable awesome urls. i.e.:
-# http://yourdomain.com/about-us/team
 RewriteEngine on
 
 # redirect www to non-www
 RewriteCond %{HTTP_HOST} ^www\.storiedibit\.it [NC]
 RewriteRule ^(.*)$ https://storiedibit.it/$1 [L,R=301]
 
-# block files and folders beginning with a dot, such as .git
-# except for the .well-known folder, which is used for Let's Encrypt and security.txt
-RewriteRule (^|/)\.(?!well-known\/) index.php [L]
-
-# block all files in the content folder from being accessed directly
-RewriteRule ^content/(.*) index.php [L]
-
-# block all files in the site folder from being accessed directly
-RewriteRule ^site/(.*) index.php [L]
-
-# block direct access to Kirby and the Panel sources
-RewriteRule ^kirby/(.*) index.php [L]
-
-# block access to the src folder
-RewriteRule ^assets/src/(.*) index.php [L]
-
-# block other stuff
-RewriteRule ^Dockerfile$ index.php [L]
-RewriteRule ^README.md$ index.php [L]
-RewriteRule ^composer.json$ index.php [L]
-RewriteRule ^docker-compose\.dev\.yml$ index.php [L]
-RewriteRule ^docker-compose\.prod\.yml$ index.php [L]
-RewriteRule ^package\.json$ index.php [L]
-RewriteRule ^package-lock\.json$ index.php [L]
-RewriteRule ^postcss\.config\.js$ index.php [L]
-RewriteRule ^tailwind\.config\.js$ index.php [L]
-RewriteRule ^tsconfig\.json$ index.php [L]
-RewriteRule ^vite\.config\.js$ index.php [L]
-
-# make site links work
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+# pass requests not referring to files that should be served from the filesystem to index.php
+RewriteCond %{REQUEST_URI} !^/media/
+RewriteCond %{REQUEST_URI} !^/assets/(?!src)
+RewriteCond %{REQUEST_URI} !^/\.well-known/
 RewriteRule ^(.*) index.php [L]
 
 </IfModule>
