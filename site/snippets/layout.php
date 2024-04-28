@@ -15,6 +15,10 @@ if ($page->isHomePage()) {
     $title = $site->title();
 }
 
+$templateName = $page->template()->name();
+
+// TODO: use og:type article for articles
+
 ?>
 <!DOCTYPE html>
 <html lang="it" class="motion-safe:scroll-smooth">
@@ -31,10 +35,14 @@ if ($page->isHomePage()) {
     <meta property="og:url" content="<?= $page->url() ?>">
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?= $title ?>">
-    <meta property="og:description"
-          content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
+    <?php if ($templateName != 'newsletter-section'): ?>
+        <meta property="og:description"
+              content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
+        <meta name="description"
+              content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
+    <?php endif; ?>
     <meta property="og:image"
-          content="<?= $page->template()->name() === 'newsletter' || $page->template()->name() === 'newsletter-section' ? $page->url() . '.png' : assetV('assets/opengraph.png') ?>">
+          content="<?= $templateName === 'newsletter' || $templateName === 'newsletter-section' ? $page->url() . '.png' : assetV('assets/opengraph.png') ?>">
     <meta property="twitter:card" content="summary_large_image">
 
     <link rel="canonical" href="<?= $page->url() ?>">
