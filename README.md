@@ -17,6 +17,8 @@ docker compose -f docker-compose.dev.yml up
 npm run dev
 ```
 
+In PhpStorm, configure the `kirby` folder as a PHP include path and change the PHP version.
+
 ## Deployment
 
 Initial setup:
