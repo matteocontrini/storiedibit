@@ -42,8 +42,9 @@ slot();
                 <input type="checkbox" id="privacy" name="privacy" required>
 
                 <span>
-                Ho preso visione dell'<a href="<?= page('privacy')->url() ?>" class="underline">informativa sulla privacy</a>
-                e acconsento al trattamento dei dati personali per l'invio della newsletter e la raccolta di statistiche.
+                    Ho preso visione dell'<a href="<?= page('privacy')->url() ?>" class="underline">informativa sulla privacy</a>
+                    e acconsento al trattamento dei dati personali per l'invio della newsletter e la raccolta di statistiche.
+                    (Un'email alla settimana, niente spam.)
                 </span>
             </label>
         </div>
