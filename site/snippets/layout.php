@@ -7,6 +7,8 @@
  * @var string $title
  */
 
+use Kirby\Toolkit\Str;
+
 if ($page->isHomePage()) {
     $title = 'Storie di bit, una newsletter su Internet, AI, digitale';
 } else if (isset($title)) {
@@ -14,6 +16,8 @@ if ($page->isHomePage()) {
 } else {
     $title = $site->title();
 }
+
+$title = Str::esc($title);
 
 $templateName = $page->template()->name();
 
