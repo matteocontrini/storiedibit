@@ -1,8 +1,9 @@
 <?php
 
-/** @var Kirby\Cms\Page $page */
-
-/** @var Kirby\Cms\Site $site */
+/**
+ * @var Kirby\Cms\Page $page
+ * @var Kirby\Cms\Site $site
+ */
 
 use Kirby\Toolkit\Str;
 
