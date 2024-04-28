@@ -1,12 +1,19 @@
 <?php
 
 /** @var Kirby\Cms\Page $page */
+
 /** @var Kirby\Cms\Site $site */
+
+use Kirby\Toolkit\Str;
 
 $isv2 = $page->title()->toDate() > 1713511388;
 $title = $page->title()->toDate('d MMMM y');
+$date = $page->title()->toDate('y-MM-dd');
 
-snippet('layout', ['title' => $title], slots: true);
+$blocks = $page->text()->toBlocks();
+$excerpt = Str::excerpt($blocks->findBy('type', 'text'));
+
+snippet('layout', ['title' => $title, 'date' => $date, 'excerpt' => $excerpt], slots: true);
 
 slot();
 
@@ -28,7 +35,7 @@ slot();
             <?php
             $n = 0;
             $skipNext = false;
-            foreach ($page->text()->toBlocks() as $block) {
+            foreach ($blocks as $block) {
                 if ($skipNext) {
                     $skipNext = false;
                     continue;
@@ -49,7 +56,7 @@ slot();
             <?php
             // TODO: not needed anymore
             $lastSubsectionBlockId = null;
-            foreach ($page->text()->toBlocks() as $block) {
+            foreach ($blocks as $block) {
                 if ($block->type() === 'newsletter-subsection') {
                     $lastSubsectionBlockId = $block->id();
                 }

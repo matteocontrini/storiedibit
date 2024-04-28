@@ -5,6 +5,8 @@
  * @var Kirby\Cms\App $kirby
  * @var string $slot
  * @var string $title
+ * @var string $excerpt
+ * @var string $date
  */
 
 use Kirby\Toolkit\Str;
@@ -23,9 +25,15 @@ if ($page->isHomePage()) {
 $title = Str::esc($title);
 $ogtitle = Str::esc($ogtitle);
 
-$templateName = $page->template()->name();
+if (isset($excerpt)) {
+    $description = Str::esc($excerpt);
+}
+else {
+    $description = 'Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.';
+}
 
-// TODO: use og:type article for articles
+
+$templateName = $page->template()->name();
 
 ?>
 <!DOCTYPE html>
@@ -41,14 +49,15 @@ $templateName = $page->template()->name();
 
     <meta property="og:site_name" content="Storie di bit">
     <meta property="og:url" content="<?= $page->url() ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="<?= $ogtitle ?>">
-    <?php if ($templateName != 'newsletter-section'): ?>
-        <meta property="og:description"
-              content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
-        <meta name="description"
-              content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
+    <?php if ($templateName === 'newsletter' || $templateName === 'newsletter-section'): ?>
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="<?= $date ?>">
+    <?php else: ?>
+        <meta property="og:type" content="website">
     <?php endif; ?>
+    <meta property="og:title" content="<?= $ogtitle ?>">
+    <meta property="og:description" content="<?= $description ?>">
+    <meta name="description" content="<?= $description ?>">
     <meta property="og:image"
           content="<?= $templateName === 'newsletter' || $templateName === 'newsletter-section' ? $page->url() . '.png' : assetV('assets/opengraph.png') ?>">
     <meta property="twitter:card" content="summary_large_image">

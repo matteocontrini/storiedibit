@@ -1,11 +1,18 @@
 <?php
 
-/** @var Kirby\Cms\Page $page */
-/** @var Kirby\Cms\Site $site */
+/**
+ * @var Kirby\Cms\Page $page
+ * @var Kirby\Cms\Site $site
+ */
+
+use Kirby\Toolkit\Str;
 
 $title = $page->title();
+$blocks = $page->blocks()->toBlocks();
+$excerpt = Str::excerpt($blocks->findBy('type', 'text'));
+$date = $page->date()->toDate('y-MM-dd');
 
-snippet('layout', ['title' => $title], slots: true);
+snippet('layout', ['title' => $title, 'excerpt' => $excerpt, 'date' => $date], slots: true);
 
 slot();
 
@@ -19,7 +26,7 @@ slot();
 
     <div class="newsletter v2">
         <?php
-        foreach ($page->blocks()->toBlocks() as $block) {
+        foreach ($blocks as $block) {
             echo smartypants($block);
         }
         ?>
