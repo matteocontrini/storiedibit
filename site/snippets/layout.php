@@ -11,13 +11,17 @@ use Kirby\Toolkit\Str;
 
 if ($page->isHomePage()) {
     $title = 'Storie di bit, una newsletter su Internet, AI, digitale';
+    $ogtitle = $title;
 } else if (isset($title)) {
+    $ogtitle = $title;
     $title .= ' | ' . $site->title();
 } else {
     $title = $site->title();
+    $ogtitle = $title;
 }
 
 $title = Str::esc($title);
+$ogtitle = Str::esc($ogtitle);
 
 $templateName = $page->template()->name();
 
@@ -38,7 +42,7 @@ $templateName = $page->template()->name();
     <meta property="og:site_name" content="Storie di bit">
     <meta property="og:url" content="<?= $page->url() ?>">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="<?= $title ?>">
+    <meta property="og:title" content="<?= $ogtitle ?>">
     <?php if ($templateName != 'newsletter-section'): ?>
         <meta property="og:description"
               content="Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.">
