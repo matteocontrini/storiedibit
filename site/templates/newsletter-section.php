@@ -14,6 +14,7 @@ slot();
 <main class="container">
     <div class="mt-14 text-lg font-medium">
         Dalla newsletter del <?= $page->date()->toDate('d MMMM y') ?>.
+        <a href="<?= $page->parentUrl() ?>" class="underline">Leggila qua</a>.
     </div>
 
     <div class="newsletter v2">

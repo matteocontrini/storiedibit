@@ -102,13 +102,12 @@ $config = [
         ],
         // Newsletter sections
         [
-            'pattern' => 'newsletter/(:any)/(:num)-(:any)',
-            'action' => function ($id, $num, $slug) {
+            'pattern' => 'newsletter/(:any)/(:any)',
+            'action' => function ($id, $slug) {
                 $page = page('newsletter')->findPageOrDraft($id);
                 $blocks = $page->text()->toBlocks();
 
                 $i = -1;
-                $sectionCounter = 0;
                 $start = -1;
                 $end = -1;
                 foreach ($blocks as $block) {
@@ -122,37 +121,28 @@ $config = [
                             $end = $i + 1;
                             break;
                         }
-                    } else if ($block->type() == 'newsletter-v2-section-header') {
-                        $sectionCounter++;
-                        if ($sectionCounter != $num) {
-                            continue;
-                        }
-                        $start = $i;
+                    } else if ($block->type() == 'newsletter-v2-section-title' && $block->text()->slug() == $slug) {
+                        $start = $i - 1;
                     }
+                }
+
+                if ($start == -1) {
+                    return false;
                 }
 
                 $sectionBlocks = $blocks->slice($start, $end - $start);
 
-                $titleBlock = $sectionBlocks->findBy('type', 'newsletter-v2-section-title');
-                if ($titleBlock) {
-                    $title = $titleBlock->text();
-                } else {
-                    return false;
-                }
-
-                $generatedSlug = $title->slug();
-                if ($slug != $generatedSlug) {
-                    go($page->url() . '/' . $num . '-' . $generatedSlug, 301);
-                }
+                $title = $sectionBlocks->findBy('type', 'newsletter-v2-section-title')->text();
 
                 return Page::factory([
-                    'slug' => 'newsletter/' . $id . '/' . $num . '-' . $slug,
+                    'slug' => 'newsletter/' . $id . '/' . $slug,
                     'template' => 'newsletter-section',
                     'model' => 'newsletter-section',
                     'content' => [
                         'uuid' => Uuid::generate(),
                         'title' => $title,
                         'date' => $page->title(),
+                        'parentUrl' => $page->url(),
                         'blocks' => $sectionBlocks->toJson(),
                     ]
                 ]);
