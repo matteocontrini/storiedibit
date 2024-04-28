@@ -100,54 +100,6 @@ $config = [
                 go($url);
             }
         ],
-        // Newsletter sections
-        [
-            'pattern' => 'newsletter/(:any)/(:any)',
-            'action' => function ($id, $slug) {
-                $page = page('newsletter')->findPageOrDraft($id);
-                $blocks = $page->text()->toBlocks();
-
-                $i = -1;
-                $start = -1;
-                $end = -1;
-                foreach ($blocks as $block) {
-                    $i++;
-                    $type = $block->type();
-                    if ($start != -1) {
-                        if ($type == 'newsletter-v2-section-header' || $type == 'newsletter-subscribe' || $type == 'line') {
-                            $end = $i;
-                            break;
-                        } else if ($type == 'newsletter-sources') {
-                            $end = $i + 1;
-                            break;
-                        }
-                    } else if ($block->type() == 'newsletter-v2-section-title' && $block->text()->slug() == $slug) {
-                        $start = $i - 1;
-                    }
-                }
-
-                if ($start == -1) {
-                    return false;
-                }
-
-                $sectionBlocks = $blocks->slice($start, $end - $start);
-
-                $title = $sectionBlocks->findBy('type', 'newsletter-v2-section-title')->text();
-
-                return Page::factory([
-                    'slug' => 'newsletter/' . $id . '/' . $slug,
-                    'template' => 'newsletter-section',
-                    'model' => 'newsletter-section',
-                    'content' => [
-                        'uuid' => Uuid::generate(),
-                        'title' => $title,
-                        'date' => $page->title(),
-                        'parentUrl' => $page->url(),
-                        'blocks' => $sectionBlocks->toJson(),
-                    ]
-                ]);
-            }
-        ]
     ],
     'thathoff.git-content.commitMessage' => '[content] :action: :item: `:url:`'
 ];
