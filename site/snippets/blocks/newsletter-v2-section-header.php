@@ -9,7 +9,9 @@
     <?= $block->text() ?>
 </span>
 
-<div
-    class="rounded-full bg-accent w-10 h-10 text-white flex items-center justify-center font-semibold mt-3 mb-5">
-    <?= $number ?>
-</div>
+<?php if (isset($number)): ?>
+    <div
+        class="rounded-full bg-accent w-10 h-10 text-white flex items-center justify-center font-semibold mt-3 mb-5">
+        <?= $number ?>
+    </div>
+<?php endif; ?>
