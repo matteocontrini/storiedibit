@@ -1,7 +1,33 @@
-blueprint: site
-
 title: Site
 
-sections:
-  pages:
-    type: pages
+columns:
+  - width: 1/2
+    sections:
+      drafts:
+        type: pages
+        template: newsletter
+        parent: kirby.page("newsletter")
+        label: Drafts
+        status: draft
+      unlisted:
+        type: pages
+        template: newsletter
+        parent: kirby.page("newsletter")
+        label: Unlisted
+        status: unlisted
+      published:
+        type: pages
+        template: newsletter
+        parent: kirby.page("newsletter")
+        label: Published
+        status: listed
+        info: "#{{ page.num }}"
+        sortBy: num desc
+  - width: 1/2
+    sections:
+      pages:
+        type: pages
+        templates:
+          - privacy
+          - credits
+          - articles

@@ -18,13 +18,13 @@ columns:
         type: pages
         template: newsletter
         parent: kirby.page("newsletter")
-        label: In Review
+        label: Unlisted
         status: unlisted
 
   right:
     width: 1/2
     sections:
-      listed:
+      published:
         type: pages
         template: newsletter
         parent: kirby.page("newsletter")
