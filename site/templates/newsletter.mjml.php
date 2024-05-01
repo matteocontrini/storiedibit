@@ -13,8 +13,6 @@ $blocks = $page->text()->toBlocks();
 
 $logoUrl = $kirby->url('assets') . '/email/logo.png';
 
-// TODO: <mj-preview>?
-
 $mjml = '<mjml>
   <mj-head>
     <mj-attributes>
@@ -34,6 +32,10 @@ $mjml = '<mjml>
       a {
         color: #A731D1;
         text-decoration: underline;
+      }
+      a.h2 {
+        color: #000;
+        text-decoration: none;
       }
       b, strong {
         font-weight: 600;
@@ -72,7 +74,13 @@ foreach ($blocks as $block) {
         $mjml .= '<mj-text mj-class="header">' . $block->text()->upper()->smartypants() . '</mj-text>';
         $mjml .= '<mj-button mj-class="number">' . $number . '</mj-button>';
     } else if ($block->type() === 'newsletter-v2-section-title') {
-        $mjml .= '<mj-text mj-class="h2"><span id="' . $block->text()->slug() . '">' . $block->text()->smartypants() . '</span></mj-text>';
+        $link = $page->url() . '/' . $block->text()->slug();
+        $mjml .= '<mj-text mj-class="h2">
+            <a class="h2" href="' . $link . '" target="_blank">
+                ' . $block->text()->smartypants() . '
+                <img src="' . $kirby->url('assets') . '/email/sources/generic.png" width="16" height="16" alt=""></a>
+            </a>
+        </mj-text>';
     } else if ($block->type() === 'text') {
         $text = $block->text()->smartypants();
         // Replace <p> with <mj-text>
@@ -115,8 +123,7 @@ foreach ($blocks as $block) {
         $mjml .= '<mj-divider padding="40px 16px"></mj-divider>';
     } else if ($block->type() === 'newsletter-only-archive') {
         $skipNext = true;
-    }
-    else if ($block->type() === 'newsletter-subscribe') {
+    } else if ($block->type() === 'newsletter-subscribe') {
         $mjml .= '</mj-column></mj-section><mj-section padding="0 16px 0 16px">
           <mj-column background-color="#A731D1" padding="20px" border-radius="8px">
             <mj-text color="#fff" align="center" padding="0">
@@ -127,6 +134,7 @@ foreach ($blocks as $block) {
     }
 }
 
+/** @noinspection HtmlUnknownTarget */
 $mjml .= '
 <mj-divider padding="40px 16px 60px 16px"></mj-divider>
 
