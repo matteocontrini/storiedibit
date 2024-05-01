@@ -1,12 +1,11 @@
 <?php
 
-use Kirby\Uuid\Uuid;
-use Kirby\Cms\Page;
+use Kirby\Toolkit\Str;
 
 $config = [
     'debug' => false,
     'ready' => function (Kirby\Cms\App $kirby) {
-        if (!vite()->isDev()) {
+        if (!vite()->isDev() && !Str::endsWith($kirby->path(), '.mjml')) {
             header('Content-Security-Policy-Report-Only: default-src \'none\'; script-src-elem \'self\' gc.zgo.at; style-src-elem \'self\'; connect-src https://storiedibit.goatcounter.com/count; font-src \'self\'; img-src \'self\'; report-uri https://18375b7a0330ab8c626c8938b621ba46.report-uri.com/r/d/csp/reportOnly');
         }
 
