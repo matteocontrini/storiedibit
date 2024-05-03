@@ -39,6 +39,10 @@ function urlToIconFileName(string $url)
         'mondomobileweb.it' => 'mondomobileweb.png',
         'hwupgrade.it' => 'hwupgrade.png',
         'ec.europa.eu' => 'europa.png',
+        'milanofinanza.it' => 'milanofinanza.png',
+        'italian.tech' => 'italiantech.png',
+        't.me' => 'telegram.png',
+        'restofworld.org' => 'restofworld.png',
         default => 'generic.png',
     };
 }
