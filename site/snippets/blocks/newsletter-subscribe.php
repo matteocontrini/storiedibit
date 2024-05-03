@@ -1,4 +1,17 @@
-<?php /** @var \Kirby\Cms\Block $block */ ?>
+<?php
+/**
+ * @var \Kirby\Cms\Block $block
+ */
+
+use Kirby\Toolkit\Str;
+
+if (isset($block)) {
+    $id = $block->id();
+} else {
+    $id = Str::uuid();
+}
+
+?>
 
 <form method="post" action="<?= page('subscribe')->url() ?>"
       class="bg-accent rounded-lg p-10 my-14">
@@ -25,8 +38,8 @@
                    class="bg-white w-full sm:w-fit rounded-lg px-10 h-12 uppercase font-semibold text-accent cursor-pointer">
         </div>
 
-        <label for="privacy-<?= $block->id() ?>" class="text-fuchsia-200 self-start text-xs">
-            <input type="checkbox" id="privacy-<?= $block->id() ?>" name="privacy" required>
+        <label for="privacy-<?= $id ?>" class="text-fuchsia-200 self-start text-xs">
+            <input type="checkbox" id="privacy-<?= $id ?>" name="privacy" required>
 
             <span>
                 Ho preso visione dell'<a href="<?= page('privacy')->url() ?>" class="underline">informativa sulla privacy</a>

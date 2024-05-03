@@ -30,6 +30,8 @@ slot();
             echo smartypants($block);
         }
         ?>
+
+        <?= snippet('blocks/newsletter-subscribe') ?>
     </div>
 
     <hr class="my-10">
