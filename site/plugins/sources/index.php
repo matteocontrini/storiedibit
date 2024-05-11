@@ -43,6 +43,9 @@ function urlToIconFileName(string $url)
         'italian.tech' => 'italiantech.png',
         't.me' => 'telegram.png',
         'restofworld.org' => 'restofworld.png',
+        '9to5mac.com' => '9to5mac.png',
+        'nature.com' => 'nature.png',
+        'bleepingcomputer.com' => 'bleepingcomputer.png',
         default => 'generic.png',
     };
 }
