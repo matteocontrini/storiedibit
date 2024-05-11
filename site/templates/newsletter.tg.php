@@ -17,7 +17,7 @@ $text = '';
 $n = 0;
 foreach ($blocks as $block) {
     if ($block->type() === 'newsletter-v2-section-title') {
-        $url = $page->url();
+        $url = $page->url() . '/' . $block->text()->slug();
         $text .= $emojis[$n] . ' <i>' . htmlspecialchars($block->text()) . '</i> [<a href="' . $url . "\">link</a>]\n\n";
         $n++;
     }
@@ -34,6 +34,7 @@ $response = new Remote("https://api.telegram.org/bot$token/sendMessage", [
         'chat_id' => $chat_id,
         'text' => $text,
         'parse_mode' => 'HTML',
+        'disable_web_page_preview' => true
     ]
 ]);
 
