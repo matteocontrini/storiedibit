@@ -46,6 +46,8 @@ function urlToIconFileName(string $url)
         '9to5mac.com' => '9to5mac.png',
         'nature.com' => 'nature.png',
         'bleepingcomputer.com' => 'bleepingcomputer.png',
+        'blog.google' => 'google.png',
+        'vox.com' => 'vox.png',
         default => 'generic.png',
     };
 }
