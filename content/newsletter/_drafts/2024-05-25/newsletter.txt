@@ -2,7 +2,7 @@ Title: 2024-05-25
 
 ----
 
-Text: [{"content":{"text":"<p>Ciao! Ecco le dieci storie più interessanti su Internet, AI, digitale che ho raccolto questa settimana.</p>"},"id":"0aa4a0d3-7e25-4c1c-aaef-a5655579b3f7","isHidden":false,"type":"text"},{"content":[],"id":"619aedf7-9041-4c87-87bf-6af2458ff845","isHidden":false,"type":"newsletter-subscribe"},{"content":{"text":"INTERNET"},"id":"2ad066df-7374-4b87-a62c-cc8c7017020a","isHidden":false,"type":"newsletter-v2-section-header"},{"content":{"text":"Il nuovo algoritmo di ranking di Google sta mettendo in difficoltà molti siti web, mentre l'AI suggerisce ci mettere la colla sulla pizza"},"id":"605ddf67-1ce5-4553-884c-bd418fd3bb07","isHidden":false,"type":"newsletter-v2-section-title"}]
+Text: [{"content":{"text":"<p>Ciao! Ecco le dieci storie più interessanti su Internet, AI, digitale che ho raccolto questa settimana.</p>"},"id":"0aa4a0d3-7e25-4c1c-aaef-a5655579b3f7","isHidden":false,"type":"text"},{"content":[],"id":"619aedf7-9041-4c87-87bf-6af2458ff845","isHidden":false,"type":"newsletter-subscribe"},{"content":{"text":"INTERNET"},"id":"2ad066df-7374-4b87-a62c-cc8c7017020a","isHidden":false,"type":"newsletter-v2-section-header"},{"content":{"text":"Google è sempre peggio per i siti web indipendenti, mentre l'AI suggerisce di mettere la colla sulla pizza"},"id":"605ddf67-1ce5-4553-884c-bd418fd3bb07","isHidden":false,"type":"newsletter-v2-section-title"},{"content":{"text":""},"id":"9a333e5c-66d7-44fd-8e4b-95ff0625dca4","isHidden":false,"type":"text"}]
 
 ----
 
