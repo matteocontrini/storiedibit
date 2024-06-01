@@ -26,6 +26,7 @@ function urlToIconFileName(string $url)
         'arstechnica.com' => 'arstechnica.png',
         'ilsole24ore.com' => 'ilsole24ore.png',
         'infodata.ilsole24ore.com' => 'ilsole24ore.png',
+        '24plus.ilsole24ore.com' => 'ilsole24ore.png',
         'openai.com' => 'openai.png',
         'blog.cloudflare.com' => 'cloudflare.png',
         'nytimes.com' => 'nytimes.png',
