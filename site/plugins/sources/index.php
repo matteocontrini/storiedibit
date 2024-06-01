@@ -48,6 +48,7 @@ function urlToIconFileName(string $url)
         'bleepingcomputer.com' => 'bleepingcomputer.png',
         'blog.google' => 'google.png',
         'vox.com' => 'vox.png',
+        'corriere.it' => 'corrieredellasera.png',
         default => 'generic.png',
     };
 }
