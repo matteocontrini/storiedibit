@@ -49,7 +49,13 @@ class NewsletterPage extends Page
                 }
 
                 $sectionBlocks = $blocks->slice($start, $end - $start);
-                $title = $sectionBlocks->findBy('type', 'newsletter-v2-section-title')->text();
+                $titleBlock = $sectionBlocks->findBy('type', 'newsletter-v2-section-title');
+                if ($titleBlock != null) {
+                    $title = $titleBlock->text();
+                } else {
+                    $titleBlock = $sectionBlocks->findBy('type', 'newsletter-v2-section-header');
+                    $title = ucfirst(strtolower($titleBlock->text()));
+                }
 
                 $pages[] = [
                     'slug' => Str::slug($title),
@@ -65,8 +71,10 @@ class NewsletterPage extends Page
                 ];
 
                 $start = -1;
-            } else if ($type == 'newsletter-v2-section-title') {
-                $start = $i - 1;
+            }
+
+            if ($type == 'newsletter-v2-section-header') {
+                $start = $i;
             }
         }
 

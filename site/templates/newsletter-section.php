@@ -9,7 +9,7 @@ use Kirby\Toolkit\Str;
 
 $title = $page->title();
 $blocks = $page->blocks()->toBlocks();
-$excerpt = Str::excerpt($blocks->findBy('type', 'text'));
+$excerpt = Str::excerpt($blocks->findBy('type', 'text') ?? $blocks->findBy('type', 'list'));
 $date = $page->date()->toDate('y-MM-dd');
 
 snippet('layout', ['title' => $title, 'excerpt' => $excerpt, 'date' => $date], slots: true);
