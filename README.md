@@ -62,9 +62,11 @@ Create the `site/config/secrets.php` config file with:
 <?php
 
 return [
-    'thathoff.git-content.commit' => false,
+    'url' => 'https://storiedibit.it',
     'emailoctopus.api_key' => '',
     'emailoctopus.list_id' => '',
+    'telegram.chat_id' => '',
+    'telegram.token' => '',
 ];
 ```  
 
