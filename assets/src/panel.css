@@ -22,6 +22,7 @@
   display: flex;
   align-items: center;
 }
+
 .k-block-type-newsletter-subsection:before {
   content: "• ";
   font-size: 18px;
@@ -62,4 +63,11 @@
 /* Line */
 .k-block-type-line hr {
   border-top: 2px solid #DDE3EE;
+}
+
+/* Big number */
+.k-block-type-newsletter-thenumber {
+  padding: 10px;
+  font-size: 4rem;
+  font-weight: 600;
 }

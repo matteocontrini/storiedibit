@@ -28,12 +28,12 @@
     "src": "../node_modules/@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2"
   },
   "src/main.ts": {
-    "file": "main-CNLxyoN7.js",
+    "file": "main-DxlVFhMO.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
     "css": [
-      "main-f51scE9E.css"
+      "main-B6CRogMj.css"
     ],
     "assets": [
       "inter-cyrillic-ext-wght-normal-DIEz8p5i.woff2",
@@ -46,7 +46,7 @@
     ]
   },
   "src/panel.css": {
-    "file": "panel-D1HZc7ad.css",
+    "file": "panel-DclXD3yb.css",
     "src": "src/panel.css",
     "isEntry": true
   }

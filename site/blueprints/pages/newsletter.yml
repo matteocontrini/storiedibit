@@ -15,6 +15,7 @@ columns:
           - newsletter-v2-section-title
           - newsletter-sources
           - newsletter-subscribe
+          - newsletter-thenumber
           - newsletter-only-email
           - newsletter-only-archive
           - list

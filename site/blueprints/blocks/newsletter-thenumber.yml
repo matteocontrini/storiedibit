@@ -1,0 +1,7 @@
+name: "Big number"
+icon: title
+wysiwyg: true
+preview: text
+fields:
+  text:
+    type: text

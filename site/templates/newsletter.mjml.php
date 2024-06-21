@@ -23,6 +23,7 @@ $mjml = '<mjml>
       <mj-class name="header" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14px" font-weight="700" letter-spacing="0.025em" padding="0 16px 16px 16px" />
       <mj-class name="number" font-family="Inter, Helvetica, Arial, sans-serif" align="left" background-color="#A731D1" border-radius="40px"
                 width="40px" height="40px" padding="0px 16px 20px 16px" inner-padding="0" font-size="16px" font-weight="600" />
+      <mj-class name="thenumber" font-family="Inter, Helvetica, Arial, sans-serif" font-size="64px" font-weight="600" line-height="1" padding="12px 16px 24px 16px" />
       <mj-social font-family="Inter, Helvetica, Arial, sans-serif" font-size="14px" line-height="28px" font-weight="600"
                 icon-size="16px" mode="horizontal" align="left" padding="10px 16px 0 16px" inner-padding="0 0 0 8px" text-padding="0 8px 0 6px" css-class="sources" />
       <mj-social-element border-radius="2px" css-class="pill" />
@@ -131,6 +132,8 @@ foreach ($blocks as $block) {
             </mj-text>
           </mj-column>
         </mj-section><mj-section padding="0 0 20px 0"><mj-column>';
+    } else if ($block->type() === 'newsletter-thenumber') {
+        $mjml .= '<mj-text mj-class="thenumber">' . $block->text() . '</mj-text>';
     }
 }
 
