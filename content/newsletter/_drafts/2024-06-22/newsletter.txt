@@ -2,7 +2,7 @@ Title: 2024-06-22
 
 ----
 
-Text: 
+Text: [{"content":{"text":"<p>Ciao!</p><p>Grazie a tutti voi che avete risposto al sondaggio della settimana scorsa, siete stati più del previsto e con molti inattesi complimenti.</p><p>Proverò a regolare il contenuto della newsletter in base alle vostre risposte: per dirmi qualcosa basta come sempre rispondere a questa email.</p>"},"id":"1dd5a297-cf82-42ba-b959-6149799a00d6","isHidden":false,"type":"text"},{"content":{"text":"INTERNET"},"id":"fbabb6bf-580e-4a4e-a964-2121e5651140","isHidden":false,"type":"newsletter-v2-section-header"},{"content":{"text":""},"id":"b70032fa-6f6c-465a-b20f-3f2c442ac3ae","isHidden":false,"type":"newsletter-v2-section-title"}]
 
 ----
 
