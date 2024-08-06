@@ -27,8 +27,7 @@ $ogtitle = Str::esc($ogtitle);
 
 if (isset($excerpt)) {
     $description = Str::esc($excerpt);
-}
-else {
+} else {
     $description = 'Una newsletter su Internet, AI e digitale: ogni weekend le dieci storie più interessanti della settimana.';
 }
 
@@ -76,9 +75,15 @@ $templateName = $page->template()->name();
             <img src="<?= asset('assets/logo.png')->resize(200 * 2)->url() ?>" alt="<?= $site->title() ?>" width="200">
         </a>
     </div>
-
-    <hr/>
 </header>
+
+<div class="bg-accent text-center font-semibold py-1 text-white">
+    <div class="container">
+        L'uscita di questa newsletter è terminata con giugno 2024.
+        <br>
+        Grazie a tutti per il supporto!
+    </div>
+</div>
 
 <?= $slot ?>
 
